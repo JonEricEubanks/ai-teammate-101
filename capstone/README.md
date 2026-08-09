@@ -50,6 +50,8 @@ Hit 6/6 and the progress bot generates a personalized, downloadable certificate 
 <img class="shot" src="/ai-teammate-101/assets/shots/certificate-sample.png" alt="A personalized AI Teammate 101 certificate of completion with the learner's name, repo, and date" />
 </details>
 
+Want to see a finished run end-to-end before you start? Here's a complete example: the [scorecard at 6/6](https://github.com/JonEricEubanks/ai-teammate-test-run/issues/1), the [generated certificate](https://github.com/JonEricEubanks/ai-teammate-test-run/blob/main/CERTIFICATE.svg), and the [retro](https://github.com/JonEricEubanks/ai-teammate-test-run/blob/main/RETRO.md) — all in one repo.
+
 >  **Facilitators:** the retro + two merged PRs are the completion evidence if you're running this as a graded workshop.
 
 ---
