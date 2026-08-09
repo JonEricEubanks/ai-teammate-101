@@ -10,3 +10,7 @@
 - **Finish**
   - [🏆 Capstone](capstone/README.md)
   - [🐛 TaskMango seeded issues](taskmango/docs/seeded-issues.md)
+- **Post-certification**
+  - [06 · New Game+: Govern Your Agents](modules/06-new-game-plus/README.md)
+  - [🗺️ GH-600 certification map](GH600-MAP.md)
+  - [🏅 Leaderboard](LEADERBOARD.md)

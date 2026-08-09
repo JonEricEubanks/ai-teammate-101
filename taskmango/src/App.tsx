@@ -4,6 +4,7 @@ import { loadTasks, saveTasks } from './storage';
 import { AddTaskForm } from './components/AddTaskForm';
 import { TaskFilter } from './components/TaskFilter';
 import { TaskList } from './components/TaskList';
+import { maybeCelebrate } from './mangoRain';
 
 export default function App() {
   const [tasks, setTasks] = useState<Task[]>(loadTasks);
@@ -30,6 +31,10 @@ export default function App() {
   const visibleTasks = tasks.filter((t) =>
     filter === 'all' ? true : filter === 'active' ? !t.done : t.done,
   );
+
+  useEffect(() => {
+    maybeCelebrate(tasks);
+  }, [tasks]);
 
   return (
     <main className="app">

@@ -1,10 +1,24 @@
 # 🥭 AI Teammate 101: Delegate Like a Tech Lead
 
+![modules](https://img.shields.io/badge/modules-7-ff9f1c)
+![auto--graded](https://img.shields.io/badge/auto--graded-certificate-8a2be2)
+![GH--600](https://img.shields.io/badge/aligned_with-GH--600_Agentic_AI_Developer-0078d4)
+![license](https://img.shields.io/badge/license-MIT_/_CC--BY-green)
+
 > A self-paced, hands-on workshop that teaches you to work with **GitHub Copilot's Coding Agent** — the autonomous AI developer that takes a GitHub issue and returns a pull request.
 
 **You already know how to code. This workshop teaches you how to *delegate*.**
 
 ---
+
+## ⚡ What makes this workshop different
+
+Most AI tutorials show you a chat window. This one puts you in the **tech lead's chair**:
+
+- 🏆 **Auto-graded.** A built-in examiner bot watches your repo and checks off milestones as you delegate, review, merge, and secure. Hit 6/6 and it awards you a shareable **Certified AI Tech Lead** certificate — right inside your own repository.
+- 🧪 **Real engineering gates.** TaskMango ships with CI, a PR plan-gate, CODEOWNERS routing, and least-privilege workflows — because reviewing AI code *is* the skill.
+- 🗺️ **Aligned to GH-600.** Every module maps to a domain of Microsoft's *Agentic AI Developer* certification. [See the map](GH600-MAP.md).
+- 🥭 **A sample app with personality.** TaskMango has planted bugs, a real (harmless) XSS vulnerability, and one easter egg. Complete every task and… you'll see.
 
 ## Why this workshop exists
 
@@ -27,12 +41,17 @@ You'll fork this template, then spend the workshop acting as the tech lead of **
 | 04 | [Security on Autopilot](modules/04-security-on-autopilot/README.md) | 25 min | Use CodeQL + Copilot Autofix on a real vulnerability |
 | 05 | [Build a Specialist Agent](modules/05-customize-your-agent/README.md) | 25 min | Create a custom agent tuned to your workflow |
 | 🏆 | [Capstone](capstone/README.md) | 45 min | Ship two delegated tasks end-to-end, solo |
+| 06 | [New Game+: Govern Your Agents](modules/06-new-game-plus/README.md) | 40 min | Plan gates, CODEOWNERS, least privilege, anti-patterns |
+| 07 | [Multi-Agent Orchestration](modules/07-multi-agent-orchestration/README.md) | 45 min | Fan-out/fan-in, subagent handoffs, conflict arbitration |
 
 ## How to take this workshop
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/JonEricEubanks/ai-teammate-101)
+
 1. Click **Use this template → Create a new repository** (top of this page). Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
-2. Work through the modules in order. Each ends with a **✅ checkpoint** so you know you're on track.
+2. Work through the modules in order. Each ends with a **✅ checkpoint** so you know you're on track — and the **🏆 progress bot** tracks your milestones automatically in your copy's Issues.
 3. Everything happens in *your copy* of this repo. Break things freely.
+4. Finish all 6 milestones → certificate unlocked → claim your spot on the [🏅 Leaderboard](LEADERBOARD.md).
 
 ## Prerequisites
 
