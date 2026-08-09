@@ -1,4 +1,4 @@
-- [:logo: Home](README.md)
+- [Home](README.md)
 - **Get Started**
   - [:wrench: 00 · Environment setup](setup/00-environment.md)
 - **Modules**

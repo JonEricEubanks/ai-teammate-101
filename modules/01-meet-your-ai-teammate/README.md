@@ -15,7 +15,7 @@
 "GitHub Copilot" is really several different working relationships with an AI, and they differ in one dimension that matters: **who's driving.**
 
 <p align="center">
-  <img src="../../assets/diagram-spectrum.svg" alt="The autonomy spectrum from autocomplete to the Coding Agent" width="860" />
+  <img src="/ai-teammate-101/assets/diagram-spectrum.svg" alt="The autonomy spectrum from autocomplete to the Coding Agent" width="860" />
 </p>
 
 | Mode | Where it lives | You're… | Best for |

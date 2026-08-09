@@ -5,7 +5,7 @@
 This is the heart of the workshop. You'll run the complete autonomous development loop once, end to end:
 
 <p align="center">
-  <img src="../../assets/diagram-loop.svg" alt="The delegation loop from issue to merged PR" width="780" />
+  <img src="/ai-teammate-101/assets/diagram-loop.svg" alt="The delegation loop from issue to merged PR" width="780" />
 </p>
 
 **Objectives.** By the end of this module you will be able to:
@@ -22,7 +22,7 @@ This is the heart of the workshop. You'll run the complete autonomous developmen
 The four phases of an agent run, at a glance:
 
 <p align="center">
-  <img src="../../assets/diagram-phases.svg" alt="Assignment, autonomous development, quality check, then PR and review" width="820" />
+  <img src="/ai-teammate-101/assets/diagram-phases.svg" alt="Assignment, autonomous development, quality check, then PR and review" width="820" />
 </p>
 
 TaskMango's filter bar (`All / Active / Completed`) tells you *which* filter you're on, but not *how many tasks* are behind each one. Your users (okay, you) want counts:
