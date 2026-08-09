@@ -157,7 +157,11 @@ jobs:
             const tracking = open.find((i) => i.title === TRACK_TITLE && !i.pull_request);
 
             if (tracking) {
-              if (!tracking.body?.includes(`Progress: ${bar} ${score}/6`)) {
+              // Update when the bar changed OR the cert embed line is missing/stale
+              // (so a 6/6 scorecard gains the certificate embed after an upgrade).
+              const barChanged = !tracking.body?.includes(`Progress: ${bar} ${score}/6`);
+              const certStale = score === 6 && !tracking.body?.includes('This is your real certificate');
+              if (barChanged || certStale) {
                 await github.rest.issues.update({ owner, repo, issue_number: tracking.number, body });
               }
             } else {

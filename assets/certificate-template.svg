@@ -44,10 +44,13 @@
   <text x="600" y="626" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="25" fill="#bfe9e1">GitHub Copilot's Coding Agent</text>
 
   <!-- milestone strip -->
-  <text x="600" y="676" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#9fc9c0">Delegated · Reviewed · Iterated · Secured · Custom agent · Capstone — 6/6 milestones</text>
+  <text x="600" y="668" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#9fc9c0">Delegated · Reviewed · Iterated · Secured · Custom agent · Capstone — 6/6 milestones</text>
 
-  <!-- footer: repo + date + verify -->
-  <text x="120" y="770" font-family="Consolas, monospace" font-size="22" fill="#ffd9a0">{{REPO}}</text>
-  <text x="1080" y="770" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#bfe9e1">{{DATE}}</text>
-  <text x="600" y="770" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#7fa79e">Verified by the Workshop Progress Bot in the repo above</text>
+  <!-- verify line -->
+  <text x="600" y="716" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#7fa79e">Verified by the Workshop Progress Bot in this repository</text>
+
+  <!-- footer: repo (left) + date (right) on their own line -->
+  <rect x="120" y="742" width="960" height="1.5" fill="#1fae9c" opacity="0.4"/>
+  <text x="120" y="778" font-family="Consolas, monospace" font-size="21" fill="#ffd9a0">{{REPO}}</text>
+  <text x="1080" y="778" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#bfe9e1">{{DATE}}</text>
 </svg>
