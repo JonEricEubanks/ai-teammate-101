@@ -100,8 +100,8 @@ Behind the scenes, Copilot spins up a sandboxed GitHub Actions environment with 
 <img class="shot" src="/ai-teammate-101/assets/shots/m02-pr-ready.png" alt="Draft pull request opened by Copilot with its own description and task checklist" />
 </details>
 
-<details class="shot"><summary>Where to watch — the Agents / sessions page for your repo</summary>
-<img class="shot" src="/ai-teammate-101/assets/shots/m02-agents-session.png" alt="The repo's Agents page listing the running Copilot session for this task" />
+<details class="shot"><summary>Where to watch — the "View session" link in the PR timeline</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m02-agents-session.png" alt="PR timeline event showing Copilot started work with a View session link" />
 </details>
 
 This is the part most people skip and shouldn't. The session log is the agent's lab notebook. As you scroll, look for:
