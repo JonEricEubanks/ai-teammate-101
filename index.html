@@ -14,20 +14,22 @@
     />
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🥭</text></svg>"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffb347'/%3E%3Cstop offset='1' stop-color='%23ff7b1c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M24 4c8 0 15 6 16.5 14.5C42 30 34 42 24 44 14 42 6 30 7.5 18.5 9 10 16 4 24 4Z' fill='url(%23g)'/%3E%3Cpath d='M24 6c2-3 5-4 8-3-1 3-4 4-8 3Z' fill='%233f9d4f'/%3E%3C/svg%3E"
     />
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
     />
-    <link rel="stylesheet" href="assets/theme.css?v=3" />
-    <link rel="stylesheet" href="assets/cover.css?v=3" />
+    <link rel="stylesheet" href="assets/design.css?v=4" />
+    <link rel="stylesheet" href="assets/theme.css?v=4" />
+    <link rel="stylesheet" href="assets/sidebar.css?v=4" />
+    <link rel="stylesheet" href="assets/cover.css?v=4" />
   </head>
   <body>
     <div id="app"></div>
     <script>
       window.$docsify = {
-        name: "🥭 AI Teammate 101",
+        name: '<svg class="ti ti-lg"><use href="assets/icons.svg#i-logo"/></svg> AI Teammate 101',
         repo: "https://github.com/JonEricEubanks/ai-teammate-101",
         loadSidebar: true,
         coverpage: true,
@@ -43,37 +45,17 @@
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-    <script type="module">
-      // Render ```mermaid code fences as real diagrams
-      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-      mermaid.initialize({ startOnLoad: false, theme: "neutral" });
-
-      const renderMermaid = async () => {
-        document
-          .querySelectorAll('pre[data-lang="mermaid"]')
-          .forEach(async (pre, i) => {
-            if (pre.dataset.rendered) return;
-            const code = pre.querySelector("code")?.textContent ?? "";
-            try {
-              const { svg } = await mermaid.render(
-                `mmd-${Date.now()}-${i}`,
-                code,
-              );
-              const holder = document.createElement("div");
-              holder.className = "mermaid-diagram";
-              holder.innerHTML = svg;
-              holder.style.cssText = "text-align:center;margin:1.2em 0;";
-              pre.replaceWith(holder);
-              holder.dataset.rendered = "true";
-            } catch {
-              /* leave the source visible if a diagram fails */
-            }
-          });
-      };
-
-      window.$docsify.plugins = (window.$docsify.plugins || []).concat((hook) =>
-        hook.doneEach(renderMermaid),
-      );
+    <script>
+      // Inline the SVG icon sprite so <use href="assets/icons.svg#..."> works everywhere.
+      fetch("assets/icons.svg")
+        .then((r) => r.text())
+        .then((svg) => {
+          const holder = document.createElement("div");
+          holder.style.display = "none";
+          holder.innerHTML = svg;
+          document.body.prepend(holder);
+        })
+        .catch(() => {});
     </script>
   </body>
 </html>

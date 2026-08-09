@@ -14,12 +14,9 @@
 
 "GitHub Copilot" is really several different working relationships with an AI, and they differ in one dimension that matters: **who's driving.**
 
-```mermaid
-flowchart LR
-    A["✏️ Autocomplete<br><i>AI suggests, you type</i>"] --> B["💬 Chat / Ask<br><i>You ask, AI answers</i>"]
-    B --> C["🛠️ Agent mode (IDE)<br><i>You pair, AI edits,<br>you approve each step</i>"]
-    C --> D["🤖 Coding Agent<br><i>You delegate,<br>AI drives to a PR</i>"]
-```
+<p align="center">
+  <img src="../../assets/diagram-spectrum.svg" alt="The autonomy spectrum from autocomplete to the Coding Agent" width="860" />
+</p>
 
 | Mode | Where it lives | You're… | Best for |
 |---|---|---|---|
@@ -34,7 +31,7 @@ The Coding Agent is different in kind, not just degree: you stop supervising key
 
 When you assign an issue to `@copilot`, four things happen:
 
-1. **Activation.** Copilot reacts 👀 on the issue, spins up an isolated GitHub Actions runner, and opens a draft PR on a `copilot/` branch.
+1. **Activation.** Copilot reacts  on the issue, spins up an isolated GitHub Actions runner, and opens a draft PR on a `copilot/` branch.
 2. **Exploration & planning.** It reads your codebase (using retrieval over the repo, not just the files you mentioned), forms a plan, and writes it into the PR description as a checklist.
 3. **Implementation & self-verification.** It commits incrementally, runs your tests and linters, writes new tests, and iterates when checks fail.
 4. **Review loop.** It marks the PR ready, requests your review, and — crucially — **responds to review comments**, resuming the session to address them.
@@ -45,21 +42,21 @@ Everything is visible in the **session log**: every file read, every command run
 
 **Delegate freely:**
 
-- ✅ Well-scoped features ("add X to page Y")
-- ✅ Bug fixes with a clear repro
-- ✅ Test coverage, docs, dependency bumps
-- ✅ Mechanical refactors, tech-debt paydown
+-  Well-scoped features ("add X to page Y")
+-  Bug fixes with a clear repro
+-  Test coverage, docs, dependency bumps
+-  Mechanical refactors, tech-debt paydown
 
 **Keep a human in the loop:**
 
-- ⚠️ Architecture decisions ("how should auth work?")
-- ⚠️ Vague asks ("make it faster", "improve UX")
-- ⚠️ Anything touching secrets, infra, or production data
-- ⚠️ Work where you couldn't review the output — *if you can't tell whether the PR is right, you can't safely delegate the task*
+-  Architecture decisions ("how should auth work?")
+-  Vague asks ("make it faster", "improve UX")
+-  Anything touching secrets, infra, or production data
+-  Work where you couldn't review the output — *if you can't tell whether the PR is right, you can't safely delegate the task*
 
 That last rule is the one that matters most. **Delegation shifts your job from writing code to specifying and reviewing it.** Modules 02 and 03 train exactly those two skills.
 
-## 🧠 Quick check
+##  Quick check
 
 For each task, decide: *delegate to the Coding Agent, or keep it human?* (Answers at the bottom — no peeking.)
 
@@ -69,7 +66,7 @@ For each task, decide: *delegate to the Coding Agent, or keep it human?* (Answer
 4. "Make the app feel more polished."
 5. "Write unit tests for `TaskFilter.tsx` to reach 80% coverage."
 
-## ✅ Checkpoint
+##  Checkpoint
 
 - [ ] You can explain the difference between Agent mode (IDE) and the Coding Agent (GitHub.com) to a colleague in one sentence
 - [ ] You can name the four phases of a run
@@ -77,7 +74,7 @@ For each task, decide: *delegate to the Coding Agent, or keep it human?* (Answer
 
 ---
 
-**Next →** [Module 02: Delegate Your First Task](../02-delegate-a-task/README.md)
+**Next ** [Module 02: Delegate Your First Task](../02-delegate-a-task/README.md)
 
 <details><summary>Quick-check answers</summary>
 

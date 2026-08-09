@@ -1,4 +1,4 @@
-# 🗺️ AI Teammate 101 → GH-600 Certification Map
+#  AI Teammate 101  GH-600 Certification Map
 
 This workshop is not affiliated with the exam — but it *deliberately trains*
 the skills GH-600 ("GitHub Certified: Agentic AI Developer", beta) assesses.
@@ -19,7 +19,7 @@ Here's the honest mapping.
 
 | Exam term | What you literally did in this workshop |
 |---|---|
-| plan → act → evaluate | wrote the issue → Copilot worked → you reviewed the PR |
+| plan  act  evaluate | wrote the issue  Copilot worked  you reviewed the PR |
 | system of record | your repo: issue, session log, PR, checks, review — all in one place |
 | control plane | Module 06: required checks, CODEOWNERS, rulesets |
 | contributor model | Module 03 rubric — you judged the PR, not the author |

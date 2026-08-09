@@ -1,4 +1,4 @@
-# 🏆 Capstone: Run the Loop Solo
+#  Capstone: Run the Loop Solo
 
 **Time: ~45 minutes**
 
@@ -44,13 +44,13 @@ For my real projects, I will delegate ______ but never ______.
 
 This capstone is deliberately portfolio-shaped. Your copy of the repo — with its PR threads, review comments, session logs, and retro — is something you can link from a resume, a blog post, or a talk proposal. "I managed an AI teammate through a full sprint" is a better story than "I completed a tutorial."
 
-> 🎓 **Facilitators:** the retro + two merged PRs are the completion evidence if you're running this as a graded workshop.
+>  **Facilitators:** the retro + two merged PRs are the completion evidence if you're running this as a graded workshop.
 
 ---
 
-## 🎉 You're done
+##  You're done
 
-You've done the full loop: spec → delegate → observe → review → iterate → merge → reflect. Most working developers haven't. Take TaskMango's remaining backlog issues if you want reps — or better, point everything you learned at a project you actually care about.
+You've done the full loop: spec  delegate  observe  review  iterate  merge  reflect. Most working developers haven't. Take TaskMango's remaining backlog issues if you want reps — or better, point everything you learned at a project you actually care about.
 
 **Where next:**
 

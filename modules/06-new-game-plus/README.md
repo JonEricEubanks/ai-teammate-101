@@ -27,10 +27,10 @@ Your repo already has the raw materials: TaskMango CI runs on every PR. This mod
 
 1. This template ships [.github/pull_request_template.md](../../.github/pull_request_template.md) — look at it. Every PR now starts with a Goal / Scope / Success criteria / Rollback skeleton.
 2. It also ships [.github/workflows/plan-gate.yml](../../.github/workflows/plan-gate.yml): a check that fails any PR whose description still contains the template's unfilled `**Goal:**` placeholder.
-3. **Enable the gate:** Settings → Branches (or Rulesets) → add a rule for `main` requiring the `plan-gate` check to pass.
-4. **Prove it bites:** open a throwaway PR with an empty description → the check fails, merge is blocked. Fill in the plan section → green. Close the PR.
+3. **Enable the gate:** Settings  Branches (or Rulesets)  add a rule for `main` requiring the `plan-gate` check to pass.
+4. **Prove it bites:** open a throwaway PR with an empty description  the check fails, merge is blocked. Fill in the plan section  green. Close the PR.
 
-> 🧠 You just converted a *documented expectation* into a *system guarantee*. That's the whole discipline of agent governance in one move.
+>  You just converted a *documented expectation* into a *system guarantee*. That's the whole discipline of agent governance in one move.
 
 ## Lab 6.2 — CODEOWNERS: route the risky stuff
 
@@ -82,14 +82,14 @@ Each of these is lifted from real failure modes. Name the anti-pattern and the G
 
 <details><summary>Answers</summary>
 
-1. **Hidden reasoning** → PR template + plan gate + required review.
-2. **Over-permissioned agent** → least-privilege `permissions:`, branch protection blocking force-push.
-3. **No arbitration** → CODEOWNERS routing + merge-validation check + explicit escalation after two failed rebases.
-4. **Blind trust in automation** → checks validate only what they're built to detect; vulnerability closure needs the *alert* to close (CodeQL re-scan), not just green tests.
+1. **Hidden reasoning**  PR template + plan gate + required review.
+2. **Over-permissioned agent**  least-privilege `permissions:`, branch protection blocking force-push.
+3. **No arbitration**  CODEOWNERS routing + merge-validation check + explicit escalation after two failed rebases.
+4. **Blind trust in automation**  checks validate only what they're built to detect; vulnerability closure needs the *alert* to close (CodeQL re-scan), not just green tests.
 
 </details>
 
-## ✅ Checkpoint
+##  Checkpoint
 
 - [ ] `plan-gate` is a required check and you've seen it block a plan-less PR
 - [ ] CODEOWNERS routes `.github/` changes to you automatically
@@ -97,7 +97,7 @@ Each of these is lifted from real failure modes. Name the anti-pattern and the G
 - [ ] Concurrency cancels stale runs (you watched it happen)
 - [ ] You scored 4/4 on the anti-pattern drill
 
-## 🤔 Reflection
+##  Reflection
 
 1. Which of the four controls would survive contact with *your* real team's repos — and which would get bypassed within a week? Why?
 2. The exam draws a hard line: *"controls in docs only"* is an anti-pattern. Look at your own projects — what governance lives only in a wiki page right now?
@@ -105,6 +105,6 @@ Each of these is lifted from real failure modes. Name the anti-pattern and the G
 
 ---
 
-**Next →** [Module 07: Multi-Agent Orchestration](../07-multi-agent-orchestration/README.md) — when one agent isn't enough: fan-out/fan-in, subagent handoffs, and conflict arbitration.
+**Next ** [Module 07: Multi-Agent Orchestration](../07-multi-agent-orchestration/README.md) — when one agent isn't enough: fan-out/fan-in, subagent handoffs, and conflict arbitration.
 
 *(Yes, there's a 07. You didn't think the specialist agents from Module 05 stayed single-player, did you?)*

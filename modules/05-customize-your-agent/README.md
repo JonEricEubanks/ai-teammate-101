@@ -40,13 +40,13 @@ tools: [...]               # optional: constrain what it may use
 # Role, rules, definition of done — written in plain language.
 ```
 
-> 📌 **Format note:** the custom-agents file format is evolving. The lab below uses the `.github/agents/*.md` convention — if your picker doesn't pick the file up, check the current GitHub docs for the latest schema.
+>  **Format note:** the custom-agents file format is evolving. The lab below uses the `.github/agents/*.md` convention — if your picker doesn't pick the file up, check the current GitHub docs for the latest schema.
 
 ## Lab 5.2 — Ship it and use it
 
 The repo's `main` branch already contains the test-engineer agent, so:
 
-1. Go to the **Agents panel**: [github.com/copilot/agents](https://github.com/copilot/agents) → select your repo.
+1. Go to the **Agents panel**: [github.com/copilot/agents](https://github.com/copilot/agents)  select your repo.
 2. In the agent picker, you should see **test-engineer** alongside the default Copilot. Select it.
 3. Give it this task:
 
@@ -64,7 +64,7 @@ Now create one from scratch. Pick a role that fits *your* work. Ideas:
 - `bug-hunter` — only writes failing regression tests for reported bugs
 - `a11y-reviewer` — only improves accessibility semantics
 
-Create `.github/agents/<your-agent>.md` in your repo (edit directly on GitHub.com: **Add file → Create new file**), using the test-engineer file as your template. Rules of thumb:
+Create `.github/agents/<your-agent>.md` in your repo (edit directly on GitHub.com: **Add file  Create new file**), using the test-engineer file as your template. Rules of thumb:
 
 - **One job.** If the description needs an "and", split it.
 - **Write the definition of done into the prompt.** Specialists earn their keep by being *stricter* than the generalist, not looser.
@@ -72,14 +72,14 @@ Create `.github/agents/<your-agent>.md` in your repo (edit directly on GitHub.co
 
 Commit it, then run one real task through it from the Agents panel.
 
-## ✅ Checkpoint
+##  Checkpoint
 
 - [ ] You ran the seeded test-engineer agent on a real task
 - [ ] Its PR contained only test files — zero component edits
 - [ ] You authored and committed your own agent definition
 - [ ] You can articulate one situation where a specialist beats the generalist
 
-## 🤔 Reflection
+##  Reflection
 
 1. How is a custom agent different from just writing better prompts each time? What do you gain by putting the persona in version control?
 2. If your team had five custom agents, what would they be — and who on the team should own their definitions?
@@ -87,6 +87,6 @@ Commit it, then run one real task through it from the Agents panel.
 
 ---
 
-**Next →** [🏆 Capstone](../../capstone/README.md)
+**Next ** [ Capstone](../../capstone/README.md)
 
 **Going deeper:** custom agents can also be wired to **MCP servers** — external tools and data sources the agent can call. That's the natural "Module 06" of this workshop series.

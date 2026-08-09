@@ -1,4 +1,4 @@
-# 🥭 AI Teammate 101: Delegate Like a Tech Lead
+#  AI Teammate 101: Delegate Like a Tech Lead
 
 <p align="center">
   <img src="assets/social-card.svg" alt="AI Teammate 101" width="720" />
@@ -15,32 +15,22 @@
 
 **You already know how to code. This workshop teaches you how to *delegate*.**
 
-## 🔄 The loop you'll master
+## The loop you'll master
 
-```mermaid
-flowchart LR
-    A["✍️ You write<br>a crisp issue"] --> B["🤖 Copilot<br>works autonomously"]
-    B --> C["🔍 You review<br>the pull request"]
-    C -->|"feedback @copilot"| B
-    C -->|"approve"| D["✅ Merge &<br>milestone unlocked"]
-    D -.->|"6/6 milestones"| E["🏆 Certificate<br>in your repo"]
-    style A fill:#fff3df,stroke:#ff9f1c
-    style B fill:#f3e8ff,stroke:#8a2be2
-    style C fill:#fff3df,stroke:#ff9f1c
-    style D fill:#e8f8ee,stroke:#2ea043
-    style E fill:#ffe9c7,stroke:#ff7b1c,stroke-width:2px
-```
+<p align="center">
+  <img src="assets/diagram-loop.svg" alt="The delegation loop: you write an issue, the agent works, you review, you merge, and milestones unlock a certificate" width="820" />
+</p>
 
 ---
 
-## ⚡ What makes this workshop different
+##  What makes this workshop different
 
 Most AI tutorials show you a chat window. This one puts you in the **tech lead's chair**:
 
-- 🏆 **Auto-graded.** A built-in examiner bot watches your repo and checks off milestones as you delegate, review, merge, and secure. Hit 6/6 and it awards you a shareable **Certified AI Tech Lead** certificate — right inside your own repository.
-- 🧪 **Real engineering gates.** TaskMango ships with CI, a PR plan-gate, CODEOWNERS routing, and least-privilege workflows — because reviewing AI code *is* the skill.
-- 🗺️ **Aligned to GH-600.** Every module maps to a domain of Microsoft's *Agentic AI Developer* certification. [See the map](GH600-MAP.md).
-- 🥭 **A sample app with personality.** TaskMango has planted bugs, a real (harmless) XSS vulnerability, and one easter egg. Complete every task and… you'll see.
+- <img src="assets/icons.svg#i-trophy" class="badge-icon" /> **Auto-graded.** A built-in examiner bot watches your repo and checks off milestones as you delegate, review, merge, and secure. Hit 6/6 and it awards you a shareable **Certified AI Tech Lead** certificate — right inside your own repository.
+- <img src="assets/icons.svg#i-shield" class="badge-icon" /> **Real engineering gates.** TaskMango ships with CI, a PR plan-gate, CODEOWNERS routing, and least-privilege workflows — because reviewing AI code *is* the skill.
+- <img src="assets/icons.svg#i-map" class="badge-icon" /> **Aligned to GH-600.** Every module maps to a domain of Microsoft's *Agentic AI Developer* certification. [See the map](GH600-MAP.md).
+- <img src="assets/icons.svg#i-sparkle" class="badge-icon" /> **A sample app with personality.** TaskMango has planted bugs, a real (harmless) XSS vulnerability, and one easter egg. Complete every task and… you'll see.
 
 ## Why this workshop exists
 
@@ -58,11 +48,11 @@ You'll fork this template, then spend the workshop acting as the tech lead of **
 |---|--------|------|------------------|
 | 00 | [Environment setup](setup/00-environment.md) | 15 min | Get your repo, license, and tooling ready |
 | 01 | [Meet Your AI Teammate](modules/01-meet-your-ai-teammate/README.md) | 15 min | Understand what Coding Agent is (and isn't) |
-| 02 | [Delegate Your First Task](modules/02-delegate-a-task/README.md) | 30 min | Run the full loop: issue → agent → PR → merge |
+| 02 | [Delegate Your First Task](modules/02-delegate-a-task/README.md) | 30 min | Run the full loop: issue  agent  PR  merge |
 | 03 | [Be the Tech Lead](modules/03-become-the-tech-lead/README.md) | 30 min | Delegate in parallel & review AI code with a rubric |
 | 04 | [Security on Autopilot](modules/04-security-on-autopilot/README.md) | 25 min | Use CodeQL + Copilot Autofix on a real vulnerability |
 | 05 | [Build a Specialist Agent](modules/05-customize-your-agent/README.md) | 25 min | Create a custom agent tuned to your workflow |
-| 🏆 | [Capstone](capstone/README.md) | 45 min | Ship two delegated tasks end-to-end, solo |
+|  | [Capstone](capstone/README.md) | 45 min | Ship two delegated tasks end-to-end, solo |
 | 06 | [New Game+: Govern Your Agents](modules/06-new-game-plus/README.md) | 40 min | Plan gates, CODEOWNERS, least privilege, anti-patterns |
 | 07 | [Multi-Agent Orchestration](modules/07-multi-agent-orchestration/README.md) | 45 min | Fan-out/fan-in, subagent handoffs, conflict arbitration |
 
@@ -70,10 +60,10 @@ You'll fork this template, then spend the workshop acting as the tech lead of **
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/JonEricEubanks/ai-teammate-101)
 
-1. Click **Use this template → Create a new repository** (top of this page). Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
-2. Work through the modules in order. Each ends with a **✅ checkpoint** so you know you're on track — and the **🏆 progress bot** tracks your milestones automatically in your copy's Issues.
+1. Click **Use this template  Create a new repository** (top of this page). Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
+2. Work through the modules in order. Each ends with a ** checkpoint** so you know you're on track — and the ** progress bot** tracks your milestones automatically in your copy's Issues.
 3. Everything happens in *your copy* of this repo. Break things freely.
-4. Finish all 6 milestones → certificate unlocked → claim your spot on the [🏅 Leaderboard](LEADERBOARD.md).
+4. Finish all 6 milestones  certificate unlocked  claim your spot on the [ Leaderboard](LEADERBOARD.md).
 
 ## Prerequisites
 
@@ -88,4 +78,4 @@ You'll fork this template, then spend the workshop acting as the tech lead of **
 
 ## Contributing
 
-Found friction? Ran it with a class? Open an issue or PR — and yes, assigning the issue to Copilot is an acceptable (encouraged) way to do it. 🍋
+Found friction? Ran it with a class? Open an issue or PR — and yes, assigning the issue to Copilot is an acceptable (encouraged) way to do it. 

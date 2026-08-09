@@ -1,4 +1,4 @@
-# 📋 Pull Request Plan
+#  Pull Request Plan
 
 > Every PR — human or agent — starts with intent. Copilot's PRs usually fill
 > this in; the plan-gate workflow blocks any PR that doesn't. If the plan

@@ -13,7 +13,7 @@ So far you've delegated *features*. Now you'll delegate a *vulnerability fix* �
 
 ---
 
-## 🍎 The planted vulnerability
+##  The planted vulnerability
 
 Open [`taskmango/src/components/TaskItem.tsx`](../../taskmango/src/components/TaskItem.tsx) and find this line:
 
@@ -27,27 +27,27 @@ Every task's text is injected into the DOM as raw HTML. Add a task containing `<
 
 Code scanning is **free for public repositories** (this is why your copy is public — on private repos it requires GitHub Advanced Security).
 
-1. In your repo: **Settings → Security and quality → Advanced Security** (left nav).
-2. Scroll to **Code scanning**, find **CodeQL analysis**, click **Set up → Default**.
+1. In your repo: **Settings  Security and quality  Advanced Security** (left nav).
+2. Scroll to **Code scanning**, find **CodeQL analysis**, click **Set up  Default**.
 3. Review the dialog (it scans on every push/PR to `main`) and click **Enable CodeQL**.
 
 CodeQL now runs on your code. The first scan takes a few minutes — it builds a semantic model of the codebase, then queries it for known vulnerability patterns.
 
 ## Lab 4.2 — Read the alert like an engineer
 
-1. Go to the **Security** tab → **Code scanning** (under *Findings*).
+1. Go to the **Security** tab  **Code scanning** (under *Findings*).
 2. Find the alert for the TaskItem sink — titled something like **"DOM text reinterpreted as HTML"** (query `js/xss-through-dom`).
 3. Open it and actually read it:
-   - **The data-flow path**: user input (`task.text`, from `localStorage` + the add form) → the `dangerouslySetInnerHTML` sink. CodeQL shows you each hop.
+   - **The data-flow path**: user input (`task.text`, from `localStorage` + the add form)  the `dangerouslySetInnerHTML` sink. CodeQL shows you each hop.
    - **Severity & the "Show paths" view**: why this is exploitable, not theoretical.
 
-> 🧠 If CodeQL finds *only* this one alert on an app this size, that's the planted seed working as intended — deterministic lab outcomes are a feature.
+>  If CodeQL finds *only* this one alert on an app this size, that's the planted seed working as intended — deterministic lab outcomes are a feature.
 
 ## Lab 4.3 — Autofix it
 
-1. In the alert, look for **"Speed up the remediation of this alert with Copilot Autofix"** → click **Generate fix**.
+1. In the alert, look for **"Speed up the remediation of this alert with Copilot Autofix"**  click **Generate fix**.
 2. Read the proposed change before touching anything. For this alert you'll likely see the raw-HTML sink replaced with plain text rendering (React escapes text content by default — which is the correct fix here). Ask yourself: *does this close the data-flow path from the alert, or just shuffle it?*
-3. Click **Commit to a new branch → Open a pull request → Commit change**.
+3. Click **Commit to a new branch  Open a pull request  Commit change**.
 4. You now have a PR for the fix — the same workflow as Modules 02–03. Run the rubric on it. Notice the bonus: **CodeQL re-scans the PR**, and the alert closes itself when the fix merges. The tooling verifies the tooling.
 
 > 🆓 **Free plan path:** Autofix for code scanning alerts on public repos is available regardless of paid Copilot plans — this lab works for everyone.
@@ -59,7 +59,7 @@ CodeQL now runs on your code. The first scan takes a few minutes — it builds a
 
 The pattern to remember: **AI is very good at generating candidate fixes for well-understood vulnerability classes. Humans stay in charge of approving them.** Same delegation loop, higher stakes, better tooling.
 
-## ✅ Checkpoint
+##  Checkpoint
 
 - [ ] CodeQL default setup is enabled and has completed at least one scan
 - [ ] You can explain the XSS data-flow path in your own words
@@ -74,11 +74,11 @@ The pattern to remember: **AI is very good at generating candidate fixes for wel
 | No "Generate fix" button | Not all queries/languages support Autofix yet — but `js/xss-through-dom` does. Confirm you're on the alert page, not the alert list |
 | Autofix change looks odd | Treat it like any agent PR: rubric, feedback, or close it. The alert stays open until a *merged* fix closes it |
 
-## 🤔 Reflection
+##  Reflection
 
 1. How does Autofix compare to how your team (or class) handles vulnerabilities today — triage meetings, backlog tickets, "we'll get to it"?
 2. What's the risk of a one-click fix culture? What would you check before merging an Autofix PR for a *subtle* bug class (e.g. SSRF or a crypto misuse) versus a DOM XSS?
 
 ---
 
-**Next →** [Module 05: Build a Specialist Agent](../05-customize-your-agent/README.md)
+**Next ** [Module 05: Build a Specialist Agent](../05-customize-your-agent/README.md)

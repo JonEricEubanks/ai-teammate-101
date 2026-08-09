@@ -1,4 +1,4 @@
-# 🐛 TaskMango Seeded Issue Backlog
+#  TaskMango Seeded Issue Backlog
 
 Copy-paste-ready issue bodies for your own copy of this repo. **Write the
 acceptance criteria yourself** where marked — that's the skill.

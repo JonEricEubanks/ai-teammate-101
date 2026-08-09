@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" font-family="Inter,Segoe UI,Arial,sans-serif">
+  <defs>
+    <linearGradient id="lgYou" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3df"/><stop offset="1" stop-color="#ffe6c2"/></linearGradient>
+    <linearGradient id="lgBot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3e8ff"/><stop offset="1" stop-color="#e6d5fb"/></linearGradient>
+    <linearGradient id="lgOk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8f8ee"/><stop offset="1" stop-color="#d2f0dd"/></linearGradient>
+    <linearGradient id="lgWin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f1c"/><stop offset="1" stop-color="#ff7b1c"/></linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#c9a25e"/>
+    </marker>
+  </defs>
+
+  <style>
+    .node { rx: 18; stroke-width: 2; }
+    .lbl  { font-size: 17px; font-weight: 700; }
+    .sub  { font-size: 12.5px; opacity: .72; }
+    .flow { stroke: #c9a25e; stroke-width: 2.5; fill: none; marker-end: url(#arr);
+            stroke-dasharray: 7 6; animation: dash 1.4s linear infinite; }
+    @keyframes dash { to { stroke-dashoffset: -13; } }
+    .float { animation: floaty 3.4s ease-in-out infinite; }
+    .float2 { animation: floaty 3.4s ease-in-out infinite .6s; }
+    @keyframes floaty { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-7px) } }
+    .pulse { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+    @keyframes pulse { 0%,100%{ transform: scale(1) } 50%{ transform: scale(1.06) } }
+  </style>
+
+  <!-- connectors -->
+  <path class="flow" d="M188 130 H 268"/>
+  <path class="flow" d="M452 130 H 532"/>
+  <path class="flow" d="M716 130 H 800"/>
+  <!-- review feedback loop -->
+  <path class="flow" d="M624 168 C 560 250, 400 250, 348 168" stroke="#b45ae0" marker-end="url(#arr)"/>
+
+  <!-- node 1: you -->
+  <g class="float">
+    <rect class="node" x="28" y="86" width="160" height="88" fill="url(#lgYou)" stroke="#ff9f1c"/>
+    <text class="lbl" x="108" y="122" text-anchor="middle" fill="#8a5a00">You</text>
+    <text class="sub" x="108" y="146" text-anchor="middle" fill="#8a5a00">write a crisp issue</text>
+  </g>
+
+  <!-- node 2: agent -->
+  <g class="float2">
+    <rect class="node" x="268" y="86" width="184" height="88" fill="url(#lgBot)" stroke="#8a63d2"/>
+    <text class="lbl" x="360" y="122" text-anchor="middle" fill="#5b3aa8">Coding Agent</text>
+    <text class="sub" x="360" y="146" text-anchor="middle" fill="#5b3aa8">works autonomously</text>
+  </g>
+
+  <!-- node 3: review -->
+  <g class="float">
+    <rect class="node" x="532" y="86" width="184" height="88" fill="url(#lgYou)" stroke="#ff9f1c"/>
+    <text class="lbl" x="624" y="122" text-anchor="middle" fill="#8a5a00">You review</text>
+    <text class="sub" x="624" y="146" text-anchor="middle" fill="#8a5a00">the pull request</text>
+  </g>
+
+  <!-- node 4: merge -->
+  <g class="float2">
+    <rect class="node" x="800" y="86" width="152" height="88" fill="url(#lgOk)" stroke="#2ea043"/>
+    <text class="lbl" x="876" y="122" text-anchor="middle" fill="#1a7f37">Merge</text>
+    <text class="sub" x="876" y="146" text-anchor="middle" fill="#1a7f37">milestone ✓</text>
+  </g>
+
+  <!-- feedback label -->
+  <text x="486" y="252" text-anchor="middle" font-size="12.5" fill="#8a63d2" font-weight="600">feedback @copilot</text>
+
+  <!-- certificate -->
+  <g class="pulse">
+    <circle cx="490" cy="316" r="26" fill="url(#lgWin)"/>
+    <path d="M482 316 l5.5 5.5 11-11" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M478 334 l-4 12 8-4M502 334 l4 12 -8-4" fill="none" stroke="#ff9f1c" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="490" y="292" text-anchor="middle" font-size="12.5" fill="#a8650a" font-weight="600">6/6 → certificate</text>
+  <path class="flow" d="M876 174 C 800 300, 560 320, 516 322" stroke="#ff9f1c" stroke-dasharray="2 5"/>
+</svg>

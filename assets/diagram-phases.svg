@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" font-family="Inter,Segoe UI,Arial,sans-serif">
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#b9a3d8"/>
+    </marker>
+  </defs>
+  <style>
+    .step { animation: rise .6s cubic-bezier(.22,1,.36,1) both; transform-origin:center; transform-box: fill-box; }
+    .n1{animation-delay:.05s}.n2{animation-delay:.18s}.n3{animation-delay:.31s}.n4{animation-delay:.44s}
+    @keyframes rise { from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:translateY(0)} }
+    .arrow { stroke:#b9a3d8; stroke-width:2.5; fill:none; marker-end:url(#a2); stroke-dasharray:6 5; animation:dsh 1.3s linear infinite; }
+    @keyframes dsh { to{ stroke-dashoffset:-11 } }
+    .t { font-size:15px; font-weight:700; fill:#2b2135 }
+    .d { font-size:12px; fill:#5c5468 }
+    .num { font-size:13px; font-weight:800; fill:#fff }
+    .ring { fill:none; stroke:#ff9f1c; stroke-width:2; opacity:0; animation:ripple 2.6s ease-out infinite; transform-origin:center; transform-box:fill-box }
+    .r2 { animation-delay:1.3s }
+    @keyframes ripple { 0%{opacity:.7; transform:scale(.6)} 100%{opacity:0; transform:scale(1.5)} }
+  </style>
+
+  <path class="arrow" d="M168 150 H 218"/>
+  <path class="arrow" d="M412 150 H 462"/>
+  <path class="arrow" d="M656 150 H 706"/>
+
+  <g class="step n1">
+    <circle cx="60" cy="120" r="15" fill="#ff9f1c"/><text class="num" x="60" y="125" text-anchor="middle">1</text>
+    <text class="t" x="60" y="170" text-anchor="middle">Assignment</text>
+    <text class="d" x="60" y="190" text-anchor="middle">issue → @copilot</text>
+    <text class="d" x="60" y="207" text-anchor="middle">adds a 👀 reaction</text>
+  </g>
+
+  <g class="step n2">
+    <circle cx="304" cy="120" r="15" fill="#8a63d2"/><text class="num" x="304" y="125" text-anchor="middle">2</text>
+    <circle class="ring" cx="304" cy="120" r="15"/>
+    <circle class="ring r2" cx="304" cy="120" r="15"/>
+    <text class="t" x="304" y="170" text-anchor="middle">Autonomous dev</text>
+    <text class="d" x="304" y="190" text-anchor="middle">plans, branches,</text>
+    <text class="d" x="304" y="207" text-anchor="middle">commits incrementally</text>
+  </g>
+
+  <g class="step n3">
+    <circle cx="548" cy="120" r="15" fill="#ff9f1c"/><text class="num" x="548" y="125" text-anchor="middle">3</text>
+    <text class="t" x="548" y="170" text-anchor="middle">Quality check</text>
+    <text class="d" x="548" y="190" text-anchor="middle">runs tests &amp; linters</text>
+    <text class="d" x="548" y="207" text-anchor="middle">documents reasoning</text>
+  </g>
+
+  <g class="step n4">
+    <circle cx="800" cy="120" r="15" fill="#2ea043"/><text class="num" x="800" y="125" text-anchor="middle">4</text>
+    <text class="t" x="800" y="170" text-anchor="middle">PR &amp; review</text>
+    <text class="d" x="800" y="190" text-anchor="middle">draft PR + session logs</text>
+    <text class="d" x="800" y="207" text-anchor="middle">iterates on feedback</text>
+  </g>
+</svg>

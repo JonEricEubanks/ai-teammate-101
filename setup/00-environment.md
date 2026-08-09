@@ -12,10 +12,10 @@ The Coding Agent is available on these plans:
 
 | Plan | Coding Agent? | Notes |
 |---|---|---|
-| Copilot Pro / Pro+ | ✅ | Includes monthly agent allowances |
-| Copilot Business / Enterprise | ✅ | Your org admin may need to enable the policy |
-| Copilot Free | ⚠️ Limited | See the fallback below |
-| **Verified students** | ✅ **Free Pro** | Via [GitHub Education](https://education.github.com) — if you're a student, claim this first |
+| Copilot Pro / Pro+ |  | Includes monthly agent allowances |
+| Copilot Business / Enterprise |  | Your org admin may need to enable the policy |
+| Copilot Free |  Limited | See the fallback below |
+| **Verified students** |  **Free Pro** | Via [GitHub Education](https://education.github.com) — if you're a student, claim this first |
 
 **How to check:** go to [github.com/settings/copilot](https://github.com/settings/copilot) and look at your plan.
 
@@ -23,7 +23,7 @@ The Coding Agent is available on these plans:
 
 ## 2. Create your own copy of this repo
 
-1. At the top of the template repository, click **Use this template → Create a new repository**.
+1. At the top of the template repository, click **Use this template  Create a new repository**.
 2. Name it anything you like (e.g. `my-ai-teammate-workshop`).
 3. Choose **Public**. *(Required: GitHub's code scanning features used in Module 04 are free on public repos. On private repos they require a GitHub Advanced Security license.)*
 4. Click **Create repository**.
@@ -34,10 +34,10 @@ From here on, **do everything in your copy**, not the original template.
 
 Your copy contains a folder called [`taskmango/`](../taskmango) — a small React + TypeScript task tracker. It runs entirely in the browser (no backend, no database), stores tasks in `localStorage`, and — by design — ships with:
 
-- 🐛 A couple of real bugs
-- 🧪 Incomplete test coverage
-- 🔓 One genuine security vulnerability (you'll fix it with AI in Module 04)
-- 📝 A [seeded issue backlog](../taskmango/docs/seeded-issues.md) of tasks ready to delegate
+-  A couple of real bugs
+-  Incomplete test coverage
+-  One genuine security vulnerability (you'll fix it with AI in Module 04)
+-  A [seeded issue backlog](../taskmango/docs/seeded-issues.md) of tasks ready to delegate
 
 You don't need to run TaskMango locally for this workshop — but if you want to see it live:
 
@@ -51,13 +51,13 @@ npm run dev
 
 This template is a [Docsify](https://docsify.js.org) site. To read it as a website instead of raw Markdown:
 
-1. In your repo, go to **Settings → Pages**.
+1. In your repo, go to **Settings  Pages**.
 2. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, and save.
 3. Wait a minute, then visit `https://<your-username>.github.io/<your-repo-name>/`.
 
 ## 5. Sanity check
 
-✅ **You're ready for Module 01 when:**
+ **You're ready for Module 01 when:**
 
 - [ ] You've confirmed your Copilot plan (or chosen the Free-plan path)
 - [ ] You have your own public copy of this repository
@@ -65,4 +65,4 @@ This template is a [Docsify](https://docsify.js.org) site. To read it as a websi
 
 ---
 
-**Next →** [Module 01: Meet Your AI Teammate](../modules/01-meet-your-ai-teammate/README.md)
+**Next ** [Module 01: Meet Your AI Teammate](../modules/01-meet-your-ai-teammate/README.md)
