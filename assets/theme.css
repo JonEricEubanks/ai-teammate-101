@@ -1,13 +1,15 @@
 /* 🥭 AI Teammate 101 — custom theme
-   Palette: deep plum background accents on light content, mango orange primary. */
+   Palette: deep teal surfaces with #55d8c7 gradients, mango orange accent. */
 
 :root {
   --mango: #ff9f1c;
   --mango-deep: #ff7b1c;
-  --plum: #2d1b3d;
-  --plum-soft: #4a2b6b;
-  --ink: #2b2135;
-  --cream: #fff8ec;
+  --teal: #55d8c7;
+  --teal-deep: #1fae9c;
+  --deep: #10443d;
+  --deep-soft: #17594f;
+  --ink: #17262b;
+  --cream: #f6faf8;
   --mono: 'Cascadia Code', 'JetBrains Mono', Consolas, monospace;
 }
 
@@ -36,13 +38,13 @@ body {
   letter-spacing: -0.01em;
 }
 .markdown-section h1 {
-  background: linear-gradient(90deg, var(--mango-deep), #b45ae0);
+  background: linear-gradient(90deg, var(--teal-deep), var(--teal));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .markdown-section h2 {
-  border-bottom: 2px solid #f3e2c7;
+  border-bottom: 2px solid #d8e8e3;
   padding-bottom: 0.3em;
 }
 
@@ -50,26 +52,26 @@ body {
 .markdown-section table {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(45, 27, 61, 0.08);
+  box-shadow: 0 2px 12px rgba(6, 36, 33, 0.08);
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
 }
 .markdown-section th {
-  background: var(--plum);
+  background: var(--deep);
   color: #fff;
   font-weight: 600;
   padding: 0.7em 1em;
 }
 .markdown-section td {
   padding: 0.6em 1em;
-  border-bottom: 1px solid #f0e6da;
+  border-bottom: 1px solid #e2ebe7;
 }
 .markdown-section tr:nth-child(even) td {
-  background: #fdf6ec;
+  background: #f2f8f6;
 }
 .markdown-section tr:hover td {
-  background: #fff3df;
+  background: #e9f7f3;
   transition: background 0.15s ease;
 }
 
@@ -77,8 +79,8 @@ body {
 .markdown-section blockquote {
   margin: 1.2em 0;
   padding: 0.9em 1.2em;
-  background: linear-gradient(135deg, #fff7ea, #fdf1ff);
-  border: 1px solid #f3ddb8;
+  background: linear-gradient(135deg, #fff7ea, #eafaf5);
+  border: 1px solid #eee0c2;
   border-left: 5px solid var(--mango);
   border-radius: 0 12px 12px 0;
   box-shadow: 0 2px 8px rgba(255, 159, 28, 0.1);
@@ -90,18 +92,18 @@ body {
 /* ---------- code ---------- */
 .markdown-section code {
   font-family: var(--mono);
-  background: #f6ecff;
-  color: #6b2fa0;
+  background: #e3f6f1;
+  color: #0c7a6b;
   border-radius: 5px;
   padding: 0.15em 0.45em;
 }
 .markdown-section pre {
   border-radius: 12px;
-  box-shadow: 0 3px 14px rgba(45, 27, 61, 0.12);
+  box-shadow: 0 3px 14px rgba(6, 36, 33, 0.12);
 }
 .markdown-section pre > code {
-  background: #241733;
-  color: #f4e8ff;
+  background: #062421;
+  color: #d6f4ee;
   padding: 1.1em 1.2em;
 }
 
@@ -117,11 +119,11 @@ body {
 
 /* ---------- sidebar ---------- */
 .sidebar {
-  background: linear-gradient(180deg, #241733 0%, var(--plum) 60%, #3d2354 100%);
+  background: linear-gradient(180deg, #062421 0%, var(--deep) 60%, #17594f 100%);
 }
 .sidebar,
 .sidebar a {
-  color: #d9c9ec;
+  color: #bfe9e1;
 }
 .sidebar ul li a {
   transition: color 0.15s ease, padding-left 0.15s ease;
@@ -139,7 +141,7 @@ body {
   color: #fff !important;
 }
 .sidebar-toggle {
-  background: var(--plum);
+  background: var(--deep);
 }
 .sidebar-toggle span {
   background: var(--mango);
@@ -151,7 +153,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .search .matching-post {
-  border-bottom: 1px solid #f0e6da;
+  border-bottom: 1px solid #e2ebe7;
 }
 
 /* ---------- smooth content entry ---------- */
@@ -172,7 +174,7 @@ body {
 /* ---------- details/summary (spoilers & answers) ---------- */
 .markdown-section details {
   background: var(--cream);
-  border: 1px solid #f0dfc0;
+  border: 1px solid #d9e8e3;
   border-radius: 10px;
   padding: 0.6em 1em;
   margin: 0.8em 0;

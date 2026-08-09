@@ -103,17 +103,41 @@
                 const v = el.getAttribute(attr);
                 if (v && ICON_RE.test(v)) {
                   ICON_RE.lastIndex = 0;
-                  el.setAttribute(attr, v.replace(ICON_RE, "").replace(/\s{2,}/g, " ").trim());
+                  el.setAttribute(
+                    attr,
+                    v
+                      .replace(ICON_RE, "")
+                      .replace(/\s{2,}/g, " ")
+                      .trim(),
+                  );
                 }
                 ICON_RE.lastIndex = 0;
               });
             });
             if (ICON_RE.test(document.title)) {
               ICON_RE.lastIndex = 0;
-              document.title = document.title.replace(ICON_RE, "").replace(/\s{2,}/g, " ").trim();
+              document.title = document.title
+                .replace(ICON_RE, "")
+                .replace(/\s{2,}/g, " ")
+                .trim();
             }
             ICON_RE.lastIndex = 0;
           };
+
+          // Docsify rewrites document.title from the sidebar link (which holds
+          // the shortcode) AFTER doneEach — watch and self-correct on every change.
+          const cleanTitle = () => {
+            if (ICON_RE.test(document.title)) {
+              ICON_RE.lastIndex = 0;
+              document.title = document.title
+                .replace(ICON_RE, "")
+                .replace(/\s{2,}/g, " ")
+                .trim();
+            }
+            ICON_RE.lastIndex = 0;
+          };
+          const titleEl = document.querySelector("head > title");
+          if (titleEl) new MutationObserver(cleanTitle).observe(titleEl, { childList: true, characterData: true, subtree: true });
 
           window.$docsify.plugins = (window.$docsify.plugins || []).concat(
             (hook) => hook.doneEach(run),

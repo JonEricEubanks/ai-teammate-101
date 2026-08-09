@@ -10,16 +10,18 @@
   --mango: #ff9f1c;
   --mango-deep: #ff7b1c;
   --mango-soft: #ffb347;
-  --plum-950: #170f1e;
-  --plum-900: #1f1428;
-  --plum-800: #2d1b3d;
-  --plum-700: #4a2b6b;
-  --violet: #8a63d2;
-  --ink: #211a2b;
-  --ink-soft: #5c5468;
-  --cream: #fbf7f0;
+  --teal: #55d8c7;
+  --teal-bright: #8ef0e0;
+  --teal-deep: #1fae9c;
+  --deep-950: #062421;
+  --deep-900: #0a332e;
+  --deep-800: #10443d;
+  --deep-700: #17594f;
+  --ink: #17262b;
+  --ink-soft: #4f6066;
+  --cream: #f6faf8;
   --surface: #ffffff;
-  --line: #ece4d8;
+  --line: #e1eae7;
 
   /* --- semantic --- */
   --bg: var(--cream);
@@ -50,9 +52,9 @@
   --r-sm: 8px;
   --r-md: 14px;
   --r-lg: 20px;
-  --shadow-sm: 0 1px 2px rgba(31, 20, 40, 0.06);
-  --shadow-md: 0 4px 20px rgba(31, 20, 40, 0.09);
-  --shadow-lg: 0 12px 40px rgba(31, 20, 40, 0.14);
+  --shadow-sm: 0 1px 2px rgba(6, 36, 33, 0.06);
+  --shadow-md: 0 4px 20px rgba(6, 36, 33, 0.09);
+  --shadow-lg: 0 12px 40px rgba(6, 36, 33, 0.14);
 
   --mono: 'Cascadia Code', 'JetBrains Mono', Consolas, monospace;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -146,8 +148,8 @@ body {
   margin: var(--sp-6) 0;
 }
 .markdown-section th {
-  background: var(--plum-800);
-  color: #f4eefc;
+  background: var(--deep-800);
+  color: #e6faf5;
   font-weight: 600;
   text-align: left;
   padding: var(--sp-3) var(--sp-4);
@@ -159,8 +161,8 @@ body {
   vertical-align: top;
 }
 .markdown-section tr:last-child td { border-bottom: none; }
-.markdown-section tr:nth-child(even) td { background: #faf6ef; }
-.markdown-section tr:hover td { background: #fdf2e2; transition: background 0.15s ease; }
+.markdown-section tr:nth-child(even) td { background: #f3f8f6; }
+.markdown-section tr:hover td { background: #e9f7f3; transition: background 0.15s ease; }
 
 /* ---------- blockquotes → callouts ---------- */
 .markdown-section blockquote {
@@ -179,21 +181,21 @@ body {
 .markdown-section code {
   font-family: var(--mono);
   font-size: 0.88em;
-  background: #f2ecfa;
-  color: #6d28a8;
+  background: #e3f6f1;
+  color: #0c7a6b;
   border-radius: 6px;
   padding: 0.15em 0.4em;
-  border: 1px solid #e6dcf5;
+  border: 1px solid #c4eae2;
 }
 .markdown-section pre {
   border-radius: var(--r-md);
   box-shadow: var(--shadow-md);
-  border: 1px solid #2c1f3d;
+  border: 1px solid #0a2f2a;
   margin: var(--sp-6) 0;
 }
 .markdown-section pre > code {
-  background: var(--plum-950);
-  color: #efe6fb;
+  background: var(--deep-950);
+  color: #d6f4ee;
   padding: var(--sp-4) var(--sp-6);
   font-size: 0.85rem;
   line-height: 1.6;
