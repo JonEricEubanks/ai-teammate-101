@@ -46,8 +46,9 @@
     <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
     <script>
-      // Inline the SVG icon sprite, then map :name: shortcodes -> icons via hook.
-      const ICON_RE = /:([a-z-]+):/g;
+      // Inline the SVG icon sprite, then replace :name: shortcodes in the
+      // rendered DOM. Post-processing (not beforeEach) so the coverpage and
+      // sidebar — which aren't re-rendered per route — get icons too.
       fetch("assets/icons.svg")
         .then((r) => r.text())
         .then((svg) => {
@@ -56,17 +57,46 @@
           holder.innerHTML = svg;
           document.body.prepend(holder);
 
+          const ICON_RE = /:([a-z-]+):/g;
+          const swap = (root) => {
+            const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+            const targets = [];
+            let n;
+            while ((n = walker.nextNode())) if (ICON_RE.test(n.nodeValue)) targets.push(n);
+            ICON_RE.lastIndex = 0;
+            for (const t of targets) {
+              const frag = document.createDocumentFragment();
+              const parts = t.nodeValue.split(ICON_RE);
+              for (let i = 0; i < parts.length; i++) {
+                if (i % 2 === 0) {
+                  if (parts[i]) frag.append(document.createTextNode(parts[i]));
+                } else {
+                  const id = "i-" + parts[i];
+                  if (holder.querySelector("#" + id)) {
+                    const s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    s.setAttribute("class", "ti");
+                    s.innerHTML = `<use href="#${id}"/>`;
+                    frag.append(s);
+                  } else {
+                    frag.append(document.createTextNode(":" + parts[i] + ":"));
+                  }
+                }
+              }
+              t.parentNode.replaceChild(frag, t);
+            }
+          };
+
+          const run = () => {
+            swap(document.querySelector("main") || document.body);
+            const sb = document.querySelector(".sidebar-nav");
+            if (sb) swap(sb);
+          };
+
           window.$docsify.plugins = (window.$docsify.plugins || []).concat(
-            (hook) =>
-              hook.beforeEach((content) =>
-                content.replace(ICON_RE, (m, name) => {
-                  // only swap names that exist as symbols in the sprite
-                  return holder.querySelector("#i-" + name)
-                    ? `<svg class="ti"><use href="#i-${name}"/></svg>`
-                    : m;
-                }),
-              ),
+            (hook) => hook.doneEach(run),
           );
+          // also run once after initial load (coverpage + sidebar first paint)
+          window.addEventListener("load", () => setTimeout(run, 300));
         })
         .catch(() => {});
     </script>
