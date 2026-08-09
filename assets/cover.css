@@ -90,6 +90,21 @@ section.cover blockquote {
   box-shadow: none;
 }
 
+/* subtitle paragraph — must override the dark inherited body text */
+section.cover p {
+  color: #e8ddf5 !important;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+section.cover p strong {
+  color: #ffd9a0 !important;
+}
+
+/* bullets container (the ✦ markers inherit from ul, the text from li) */
+section.cover ul {
+  color: #d9c9ec !important;
+}
+
 section.cover ul {
   list-style: none;
   padding: 0;
@@ -128,7 +143,8 @@ section.cover a[href*="github.com"] {
 section.cover a[href="README.md"],
 section.cover .cover-main > p:last-child a:last-child {
   background: linear-gradient(90deg, #ff9f1c, #ff7b1c);
-  color: #1a1023 !important;
+  color: #241300 !important;
+  font-weight: 700 !important;
   box-shadow: 0 4px 20px rgba(255, 159, 28, 0.45);
 }
 
