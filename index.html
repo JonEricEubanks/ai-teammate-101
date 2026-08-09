@@ -97,6 +97,22 @@
             // body covers the coverpage (sibling of main), main, and sidebar.
             // Skip the hidden sprite holder to avoid corrupting it.
             swap(document.body);
+            // strip leftover shortcodes from title/alt attributes + tab title
+            document.querySelectorAll("[title],[alt]").forEach((el) => {
+              ["title", "alt"].forEach((attr) => {
+                const v = el.getAttribute(attr);
+                if (v && ICON_RE.test(v)) {
+                  ICON_RE.lastIndex = 0;
+                  el.setAttribute(attr, v.replace(ICON_RE, "").replace(/\s{2,}/g, " ").trim());
+                }
+                ICON_RE.lastIndex = 0;
+              });
+            });
+            if (ICON_RE.test(document.title)) {
+              ICON_RE.lastIndex = 0;
+              document.title = document.title.replace(ICON_RE, "").replace(/\s{2,}/g, " ").trim();
+            }
+            ICON_RE.lastIndex = 0;
           };
 
           window.$docsify.plugins = (window.$docsify.plugins || []).concat(
