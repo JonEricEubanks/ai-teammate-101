@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #fff8ec;
+  color: #3d2c1e;
+}
+
+.app {
+  max-width: 480px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.app h1 {
+  margin-bottom: 0;
+}
+
+.tagline {
+  margin-top: 0.25rem;
+  color: #a0764a;
+}
+
+.add-task {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e0c9a6;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.add-task button,
+.filter-bar button {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #e0c9a6;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-bar button.active {
+  background: #ff9f1c;
+  border-color: #ff9f1c;
+  color: #fff;
+  font-weight: 600;
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #f0e2cd;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background: #fff;
+}
+
+.task-item.done span {
+  text-decoration: line-through;
+  color: #b09b82;
+}
+
+.task-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.task-item .delete {
+  border: none;
+  background: none;
+  color: #c0392b;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.empty {
+  color: #a0764a;
+  font-style: italic;
+}
