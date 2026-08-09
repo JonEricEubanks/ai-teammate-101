@@ -59,10 +59,14 @@
 
           const ICON_RE = /:([a-z-]+):/g;
           const swap = (root) => {
-            const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+            const walker = document.createTreeWalker(
+              root,
+              NodeFilter.SHOW_TEXT,
+            );
             const targets = [];
             let n;
-            while ((n = walker.nextNode())) if (ICON_RE.test(n.nodeValue)) targets.push(n);
+            while ((n = walker.nextNode()))
+              if (ICON_RE.test(n.nodeValue)) targets.push(n);
             ICON_RE.lastIndex = 0;
             for (const t of targets) {
               const frag = document.createDocumentFragment();
@@ -73,7 +77,10 @@
                 } else {
                   const id = "i-" + parts[i];
                   if (holder.querySelector("#" + id)) {
-                    const s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    const s = document.createElementNS(
+                      "http://www.w3.org/2000/svg",
+                      "svg",
+                    );
                     s.setAttribute("class", "ti");
                     s.innerHTML = `<use href="#${id}"/>`;
                     frag.append(s);
@@ -87,9 +94,9 @@
           };
 
           const run = () => {
-            swap(document.querySelector("main") || document.body);
-            const sb = document.querySelector(".sidebar-nav");
-            if (sb) swap(sb);
+            // body covers the coverpage (sibling of main), main, and sidebar.
+            // Skip the hidden sprite holder to avoid corrupting it.
+            swap(document.body);
           };
 
           window.$docsify.plugins = (window.$docsify.plugins || []).concat(
