@@ -20,10 +20,11 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
     />
-    <link rel="stylesheet" href="assets/design.css?v=5" />
-    <link rel="stylesheet" href="assets/theme.css?v=5" />
-    <link rel="stylesheet" href="assets/sidebar.css?v=5" />
-    <link rel="stylesheet" href="assets/cover.css?v=5" />
+    <link rel="stylesheet" href="assets/design.css?v=6" />
+    <link rel="stylesheet" href="assets/theme.css?v=6" />
+    <link rel="stylesheet" href="assets/sidebar.css?v=6" />
+    <link rel="stylesheet" href="assets/cover.css?v=6" />
+    <link rel="stylesheet" href="assets/progress.css?v=6" />
   </head>
   <body>
     <div id="app"></div>
@@ -35,6 +36,7 @@
         coverpage: true,
         auto2top: true,
         search: "auto",
+        noEmoji: true,
         copyCode: {
           buttonText: "Copy",
           errorText: "Error",
@@ -45,6 +47,7 @@
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+    <script src="assets/progress.js?v=6"></script>
     <script>
       // Inline the SVG icon sprite, then replace :name: shortcodes in the
       // rendered DOM. Post-processing (not beforeEach) so the coverpage and
@@ -65,12 +68,15 @@
             );
             const targets = [];
             let n;
-            while ((n = walker.nextNode()))
+            while ((n = walker.nextNode())) {
+              ICON_RE.lastIndex = 0; // /g regex: reset before every test
               if (ICON_RE.test(n.nodeValue)) targets.push(n);
+            }
             ICON_RE.lastIndex = 0;
             for (const t of targets) {
               const frag = document.createDocumentFragment();
               const parts = t.nodeValue.split(ICON_RE);
+              let swapped = false;
               for (let i = 0; i < parts.length; i++) {
                 if (i % 2 === 0) {
                   if (parts[i]) frag.append(document.createTextNode(parts[i]));
@@ -84,12 +90,15 @@
                     s.setAttribute("class", "ti");
                     s.innerHTML = `<use href="#${id}"/>`;
                     frag.append(s);
+                    swapped = true;
                   } else {
                     frag.append(document.createTextNode(":" + parts[i] + ":"));
                   }
                 }
               }
-              t.parentNode.replaceChild(frag, t);
+              // only touch the DOM when a real icon was swapped — keeps the
+              // MutationObserver below from looping on unknown shortcodes
+              if (swapped && t.parentNode) t.parentNode.replaceChild(frag, t);
             }
           };
 
@@ -137,13 +146,34 @@
             ICON_RE.lastIndex = 0;
           };
           const titleEl = document.querySelector("head > title");
-          if (titleEl) new MutationObserver(cleanTitle).observe(titleEl, { childList: true, characterData: true, subtree: true });
+          if (titleEl)
+            new MutationObserver(cleanTitle).observe(titleEl, {
+              childList: true,
+              characterData: true,
+              subtree: true,
+            });
 
           window.$docsify.plugins = (window.$docsify.plugins || []).concat(
             (hook) => hook.doneEach(run),
           );
           // also run once after initial load (coverpage + sidebar first paint)
           window.addEventListener("load", () => setTimeout(run, 300));
+          // Docsify re-renders the sidebar asynchronously (after doneEach),
+          // which can restore raw :icon: text — re-run the swap on app DOM
+          // changes. The `swapped` guard + rAF debounce prevent loops.
+          let scheduled = false;
+          new MutationObserver(() => {
+            if (scheduled) return;
+            scheduled = true;
+            requestAnimationFrame(() => {
+              scheduled = false;
+              run();
+            });
+            // NOTE: Docsify replaces #app entirely, so observe document.body.
+          }).observe(document.body, {
+            childList: true,
+            subtree: true,
+          });
         })
         .catch(() => {});
     </script>

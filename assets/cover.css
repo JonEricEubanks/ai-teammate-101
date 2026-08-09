@@ -3,7 +3,7 @@
    ============================================================ */
 
 section.cover {
-  background: radial-gradient(120% 120% at 20% 0%, #2d1b3d 0%, #170f1e 55%, #12090f 100%) !important;
+  background: radial-gradient(120% 120% at 20% 0%, #10443d 0%, #062421 55%, #041a17 100%) !important;
   position: relative;
   overflow: hidden;
 }
@@ -12,9 +12,9 @@ section.cover::before {
   content: '';
   position: absolute; inset: -30%;
   background:
-    radial-gradient(closest-side, rgba(255,159,28,0.20), transparent 60%) 18% 30% / 55% 55% no-repeat,
-    radial-gradient(closest-side, rgba(138,99,210,0.22), transparent 60%) 82% 24% / 50% 50% no-repeat,
-    radial-gradient(closest-side, rgba(255,123,28,0.14), transparent 60%) 70% 82% / 60% 60% no-repeat;
+    radial-gradient(closest-side, rgba(255,159,28,0.16), transparent 60%) 18% 30% / 55% 55% no-repeat,
+    radial-gradient(closest-side, rgba(85,216,199,0.26), transparent 60%) 82% 24% / 50% 50% no-repeat,
+    radial-gradient(closest-side, rgba(31,174,156,0.18), transparent 60%) 70% 82% / 60% 60% no-repeat;
   animation: aurora 16s ease-in-out infinite alternate;
   pointer-events: none;
 }
@@ -71,7 +71,7 @@ section.cover .hero-tagline {
   font-size: 1.5rem; font-weight: 600; color: #ffd9a0 !important; margin: 0 0 .9rem;
 }
 section.cover .hero-sub {
-  font-size: 1.06rem; line-height: 1.7; color: #cfc0e2 !important;
+  font-size: 1.06rem; line-height: 1.7; color: #c2eae2 !important;
   max-width: 34rem; margin: 0 auto 1.6rem;
 }
 section.cover .hero-sub strong { color: #ffd9a0 !important; font-weight: 650; }
@@ -82,7 +82,7 @@ section.cover .hero-points {
 }
 section.cover .hero-points li {
   display: flex; align-items: center; gap: .6rem;
-  color: #cfc0e2 !important; font-size: 1rem; font-weight: 500;
+  color: #c2eae2 !important; font-size: 1rem; font-weight: 500;
 }
 section.cover .hero-points .ti { color: #ff9f1c; width: 1.2em; height: 1.2em; }
 
