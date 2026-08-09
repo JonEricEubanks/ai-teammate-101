@@ -42,6 +42,20 @@
           errorText: "Error",
           successText: "Copied",
         },
+        plugins: [
+          function (hook) {
+            // The markdown uses site-absolute asset paths like
+            // "/ai-teammate-101/assets/…". On a host that already serves the
+            // site under that prefix (GitHub Pages) this resolves correctly,
+            // but a leading "/" would break on a plain local static server
+            // (drops the /ai-teammate-101/ prefix). Rewrite to the actual
+            // site base so screenshots/diagrams load in both environments.
+            const base = location.pathname.replace(/[^/]*$/, ""); // e.g. /ai-teammate-101/
+            hook.beforeEach((content) =>
+              content.replace(/(src=["'])\/ai-teammate-101\//g, "$1" + base),
+            );
+          },
+        ],
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
@@ -180,6 +194,29 @@
           });
         })
         .catch(() => {});
+
+      // Click-to-zoom lightbox for inline screenshots. Works on any
+      // <img class="shot"> in the rendered markdown, including ones added
+      // later by SPA navigation (event delegation on document).
+      const overlay = document.createElement("div");
+      overlay.id = "shot-lightbox";
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+      overlay.innerHTML = '<img alt="" /><p>Click anywhere to close</p>';
+      document.body.appendChild(overlay);
+      const overlayImg = overlay.querySelector("img");
+      const closeLightbox = () => overlay.classList.remove("open");
+      overlay.addEventListener("click", closeLightbox);
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+      document.addEventListener("click", (e) => {
+        const img = e.target.closest && e.target.closest("img.shot");
+        if (!img) return;
+        overlayImg.src = img.src;
+        overlayImg.alt = img.alt || "";
+        overlay.classList.add("open");
+      });
     </script>
   </body>
 </html>

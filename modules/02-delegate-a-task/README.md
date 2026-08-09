@@ -84,6 +84,10 @@ Notice what this spec does, because you'll do it forever after this workshop:
 3. In the assignment dialog, confirm the repository and base branch (`main`) are correct, then confirm.
 4. Within a few seconds, Copilot adds a ** reaction** to the issue. That emoji is your "ticket acknowledged."
 
+<details class="shot"><summary>What you'll see — Copilot assigned, ticket acknowledged</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m02-issue-assigned.png" alt="Issue with Copilot listed under Assignees and the eyes reaction on the issue body" />
+</details>
+
 Behind the scenes, Copilot spins up a sandboxed GitHub Actions environment with your repo checked out, and starts working. You never touch this environment — you observe it.
 
 ## Lab 2.3 — Watch it think (session logs)
@@ -91,6 +95,14 @@ Behind the scenes, Copilot spins up a sandboxed GitHub Actions environment with 
 1. Copilot opens a **draft pull request** linked from the issue's sidebar (Development section) and timeline. If the link isn't there yet, wait ~30 seconds and refresh.
 2. Open the PR. Note that it's a **draft** — work in progress — and that Copilot wrote the PR description itself, including a task checklist it will tick off as it goes.
 3. In the PR timeline, click **View session**.
+
+<details class="shot"><summary>What you'll see — the draft PR appears in the sidebar and timeline</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m02-pr-ready.png" alt="Draft pull request opened by Copilot with its own description and task checklist" />
+</details>
+
+<details class="shot"><summary>Where to watch — the Agents / sessions page for your repo</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m02-agents-session.png" alt="The repo's Agents page listing the running Copilot session for this task" />
+</details>
 
 This is the part most people skip and shouldn't. The session log is the agent's lab notebook. As you scroll, look for:
 
@@ -106,6 +118,10 @@ Copilot typically takes 3–10 minutes for a task this size. While it works, you
 ## Lab 2.4 — Review like it came from a teammate
 
 When Copilot finishes, it marks the PR **ready for review** and requests your review. Now do the job you hired it to do.
+
+<details class="shot"><summary>What you'll review — the Files changed diff Copilot produced</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m02-pr-diff.png" alt="Files changed view showing edits to TaskFilter.tsx, App.tsx, and a new TaskFilter test" />
+</details>
 
 Open the **Files changed** tab and work through this rubric (you'll get a fuller version in Module 03):
 

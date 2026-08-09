@@ -264,3 +264,86 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .markdown-section { animation: none; }
 }
+
+/* ---- Inline "what you'll see" screenshots ---------------------------- */
+/* Collapsible reveal: hidden until the learner clicks the summary line. */
+.markdown-section details.shot {
+  margin: 0.6rem 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel, #fbfdfc);
+  overflow: hidden;
+}
+.markdown-section details.shot > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--teal, #1fae9c);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  user-select: none;
+}
+.markdown-section details.shot > summary::-webkit-details-marker { display: none; }
+/* leading "preview" icon: an eye, as an inline SVG (no emoji font reliance) */
+.markdown-section details.shot > summary::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  background: currentColor;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.6"/></svg>') center / contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.6"/></svg>') center / contain no-repeat;
+}
+/* trailing chevron that rotates when open (SVG, not a unicode glyph) */
+.markdown-section details.shot > summary::after {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: auto;
+  flex: 0 0 auto;
+  background: var(--muted, #6b7f88);
+  transition: transform 0.18s ease;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>') center / contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>') center / contain no-repeat;
+}
+.markdown-section details.shot[open] > summary::after { transform: rotate(90deg); }
+.markdown-section details.shot > summary:hover { background: rgba(31, 174, 156, 0.07); }
+.markdown-section details.shot img.shot {
+  display: block;
+  width: 100%;
+  border-top: 1px solid var(--border);
+  cursor: zoom-in;
+}
+
+/* Lightbox overlay for enlarging any img.shot */
+#shot-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 22, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease;
+  cursor: zoom-out;
+}
+#shot-lightbox.open { opacity: 1; visibility: visible; }
+#shot-lightbox img {
+  max-width: 94vw;
+  max-height: 84vh;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+#shot-lightbox p {
+  color: #cfe3de;
+  font-size: 0.8rem;
+  margin-top: 0.9rem;
+  letter-spacing: 0.02em;
+}
