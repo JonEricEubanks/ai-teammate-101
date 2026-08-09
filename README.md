@@ -1,13 +1,35 @@
 # 🥭 AI Teammate 101: Delegate Like a Tech Lead
 
-![modules](https://img.shields.io/badge/modules-7-ff9f1c)
-![auto--graded](https://img.shields.io/badge/auto--graded-certificate-8a2be2)
-![GH--600](https://img.shields.io/badge/aligned_with-GH--600_Agentic_AI_Developer-0078d4)
-![license](https://img.shields.io/badge/license-MIT_/_CC--BY-green)
+<p align="center">
+  <img src="assets/social-card.svg" alt="AI Teammate 101" width="720" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/modules-7-ff9f1c?style=for-the-badge" alt="7 modules" />
+  <img src="https://img.shields.io/badge/auto--graded-certificate-8a2be2?style=for-the-badge" alt="auto-graded certificate" />
+  <img src="https://img.shields.io/badge/aligned_with-GH--600-0078d4?style=for-the-badge" alt="aligned with GH-600" />
+  <img src="https://img.shields.io/badge/license-MIT_/_CC--BY-green?style=for-the-badge" alt="license" />
+</p>
 
 > A self-paced, hands-on workshop that teaches you to work with **GitHub Copilot's Coding Agent** — the autonomous AI developer that takes a GitHub issue and returns a pull request.
 
 **You already know how to code. This workshop teaches you how to *delegate*.**
+
+## 🔄 The loop you'll master
+
+```mermaid
+flowchart LR
+    A["✍️ You write<br>a crisp issue"] --> B["🤖 Copilot<br>works autonomously"]
+    B --> C["🔍 You review<br>the pull request"]
+    C -->|"feedback @copilot"| B
+    C -->|"approve"| D["✅ Merge &<br>milestone unlocked"]
+    D -.->|"6/6 milestones"| E["🏆 Certificate<br>in your repo"]
+    style A fill:#fff3df,stroke:#ff9f1c
+    style B fill:#f3e8ff,stroke:#8a2be2
+    style C fill:#fff3df,stroke:#ff9f1c
+    style D fill:#e8f8ee,stroke:#2ea043
+    style E fill:#ffe9c7,stroke:#ff7b1c,stroke-width:2px
+```
 
 ---
 

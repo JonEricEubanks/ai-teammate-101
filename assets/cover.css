@@ -1,0 +1,109 @@
+/* 🥭 Cover page — animated gradient hero */
+
+section.cover {
+  background: linear-gradient(130deg, #1a1023, #2d1b3d, #4a2b1f, #2d1b3d, #1a1023) !important;
+  background-size: 400% 400% !important;
+  animation: gradientDrift 18s ease infinite;
+}
+
+@keyframes gradientDrift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+section.cover .cover-main {
+  animation: heroRise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section.cover h1 {
+  color: #fff !important;
+  font-size: 3.4rem !important;
+  letter-spacing: -0.02em;
+}
+
+section.cover h1 span {
+  /* the 🥭 gets a gentle bob */
+  display: inline-block;
+  animation: mangoBob 3s ease-in-out infinite;
+}
+
+@keyframes mangoBob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-8deg); }
+}
+
+section.cover blockquote {
+  color: #ffd9a0 !important;
+  font-size: 1.35rem;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+section.cover ul {
+  list-style: none;
+  padding: 0;
+}
+
+section.cover ul li {
+  color: #d9c9ec;
+  padding: 0.2em 0;
+}
+
+section.cover ul li::before {
+  content: '✦ ';
+  color: var(--mango, #ff9f1c);
+}
+
+section.cover a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section.cover .cover-main > p:last-child a,
+section.cover a[href*="github.com"] {
+  display: inline-block;
+  margin: 0.4em 0.5em;
+  padding: 0.7em 1.8em;
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+}
+
+section.cover a[href*="github.com"] {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+section.cover a[href="README.md"],
+section.cover .cover-main > p:last-child a:last-child {
+  background: linear-gradient(90deg, #ff9f1c, #ff7b1c);
+  color: #1a1023 !important;
+  box-shadow: 0 4px 20px rgba(255, 159, 28, 0.45);
+}
+
+section.cover a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 26px rgba(255, 159, 28, 0.5);
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  section.cover,
+  section.cover .cover-main,
+  section.cover h1 span {
+    animation: none !important;
+  }
+}
