@@ -27,10 +27,10 @@
 
 Most AI tutorials show you a chat window. This one puts you in the **tech lead's chair**:
 
-- <svg class="ti"><use href="assets/icons.svg#i-trophy"/></svg> **Auto-graded.** A built-in examiner bot watches your repo and checks off milestones as you delegate, review, merge, and secure. Hit 6/6 and it awards you a shareable **Certified AI Tech Lead** certificate — right inside your own repository.
-- <svg class="ti"><use href="assets/icons.svg#i-shield"/></svg> **Real engineering gates.** TaskMango ships with CI, a PR plan-gate, CODEOWNERS routing, and least-privilege workflows — because reviewing AI code *is* the skill.
-- <svg class="ti"><use href="assets/icons.svg#i-map"/></svg> **Aligned to GH-600.** Every module maps to a domain of Microsoft's *Agentic AI Developer* certification. [See the map](GH600-MAP.md).
-- <svg class="ti"><use href="assets/icons.svg#i-sparkle"/></svg> **A sample app with personality.** TaskMango has planted bugs, a real (harmless) XSS vulnerability, and one easter egg. Complete every task and… you'll see.
+- :trophy: **Auto-graded.** A built-in examiner bot watches your repo and checks off milestones as you delegate, review, merge, and secure. Hit 6/6 and it awards you a shareable **Certified AI Tech Lead** certificate — right inside your own repository.
+- :shield: **Real engineering gates.** TaskMango ships with CI, a PR plan-gate, CODEOWNERS routing, and least-privilege workflows — because reviewing AI code *is* the skill.
+- :map: **Aligned to GH-600.** Every module maps to a domain of Microsoft's *Agentic AI Developer* certification. [See the map](GH600-MAP.md).
+- :sparkle: **A sample app with personality.** TaskMango has planted bugs, a real (harmless) XSS vulnerability, and one easter egg. Complete every task and… you'll see.
 
 ## Why this workshop exists
 

@@ -17,17 +17,13 @@
   <p class="hero-sub">A hands-on workshop for learning to work with GitHub Copilot's <strong>Coding Agent</strong> — from your first delegated issue to AI-driven security fixes.</p>
 
   <ul class="hero-points">
-    <li><svg class="ti"><use href="assets/icons.svg#i-clock"/></svg>~2.5 hours, self-paced</li>
-    <li><svg class="ti"><use href="assets/icons.svg#i-shield"/></svg>Uses your own GitHub account &amp; Copilot license</li>
-    <li><svg class="ti"><use href="assets/icons.svg#i-pr"/></svg>You review the code. AI writes it.</li>
+    <li>:clock: ~2.5 hours, self-paced</li>
+    <li>:shield: Uses your own GitHub account &amp; Copilot license</li>
+    <li>:pr: You review the code. AI writes it.</li>
   </ul>
 
   <p class="hero-cta">
-    <a class="btn btn-ghost" href="https://github.com/JonEricEubanks/ai-teammate-101">
-      <svg class="ti"><use href="assets/icons.svg#i-globe"/></svg>GitHub
-    </a>
-    <a class="btn btn-primary" href="README.md">
-      <svg class="ti"><use href="assets/icons.svg#i-play"/></svg>Get Started
-    </a>
+    <a class="btn btn-ghost" href="https://github.com/JonEricEubanks/ai-teammate-101">:globe: GitHub</a>
+    <a class="btn btn-primary" href="README.md">:play: Get Started</a>
   </p>
 </div>

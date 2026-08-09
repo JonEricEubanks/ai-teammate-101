@@ -46,7 +46,8 @@
     <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
     <script>
-      // Inline the SVG icon sprite so <use href="assets/icons.svg#..."> works everywhere.
+      // Inline the SVG icon sprite, then map :name: shortcodes -> icons via hook.
+      const ICON_RE = /:([a-z-]+):/g;
       fetch("assets/icons.svg")
         .then((r) => r.text())
         .then((svg) => {
@@ -54,6 +55,18 @@
           holder.style.display = "none";
           holder.innerHTML = svg;
           document.body.prepend(holder);
+
+          window.$docsify.plugins = (window.$docsify.plugins || []).concat(
+            (hook) =>
+              hook.beforeEach((content) =>
+                content.replace(ICON_RE, (m, name) => {
+                  // only swap names that exist as symbols in the sprite
+                  return holder.querySelector("#i-" + name)
+                    ? `<svg class="ti"><use href="#i-${name}"/></svg>`
+                    : m;
+                }),
+              ),
+          );
         })
         .catch(() => {});
     </script>
