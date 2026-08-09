@@ -34,11 +34,16 @@ jobs:
 
             // --- milestone detection -------------------------------------------------
 
-            // M1: an issue assigned to Copilot
-            const assigned = await github.paginate(github.rest.issues.listForRepo, {
+            // M1: an issue assigned to Copilot. The "Assign to Agent" flow sets the
+            // assignee login to 'Copilot'; older flows use the app slug 'copilot-swe-agent'.
+            // Check both.
+            const assignedLegacy = await github.paginate(github.rest.issues.listForRepo, {
               owner, repo, assignee: COPILOT_BOT, state: 'all', per_page: 10,
             });
-            const m1 = assigned.length > 0;
+            const assignedNew = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, assignee: 'Copilot', state: 'all', per_page: 10,
+            });
+            const m1 = assignedLegacy.length > 0 || assignedNew.length > 0;
 
             // Copilot PRs (branches always start with copilot/)
             const pulls = await github.paginate(github.rest.pulls.list, {
