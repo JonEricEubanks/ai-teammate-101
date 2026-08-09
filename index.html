@@ -13,6 +13,10 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
     <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🥭</text></svg>"
+    />
+    <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
     />
@@ -41,29 +45,34 @@
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
     <script type="module">
       // Render ```mermaid code fences as real diagrams
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: false, theme: "neutral" });
 
       const renderMermaid = async () => {
         document
           .querySelectorAll('pre[data-lang="mermaid"]')
           .forEach(async (pre, i) => {
             if (pre.dataset.rendered) return;
-            const code = pre.querySelector('code')?.textContent ?? '';
+            const code = pre.querySelector("code")?.textContent ?? "";
             try {
-              const { svg } = await mermaid.render(`mmd-${Date.now()}-${i}`, code);
-              const holder = document.createElement('div');
-              holder.className = 'mermaid-diagram';
+              const { svg } = await mermaid.render(
+                `mmd-${Date.now()}-${i}`,
+                code,
+              );
+              const holder = document.createElement("div");
+              holder.className = "mermaid-diagram";
               holder.innerHTML = svg;
-              holder.style.cssText = 'text-align:center;margin:1.2em 0;';
+              holder.style.cssText = "text-align:center;margin:1.2em 0;";
               pre.replaceWith(holder);
-              holder.dataset.rendered = 'true';
-            } catch { /* leave the source visible if a diagram fails */ }
+              holder.dataset.rendered = "true";
+            } catch {
+              /* leave the source visible if a diagram fails */
+            }
           });
       };
 
-      window.$docsify.plugins = (window.$docsify.plugins || []).concat(
-        (hook) => hook.doneEach(renderMermaid)
+      window.$docsify.plugins = (window.$docsify.plugins || []).concat((hook) =>
+        hook.doneEach(renderMermaid),
       );
     </script>
   </body>
