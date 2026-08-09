@@ -9,6 +9,6 @@ Open a PR adding a row (or ask Copilot to do it — obviously).
 
 ## Rules
 
-- Your linked repo must show the **My AI Teammate 101 Progress** issue at 6/6.
+- Your linked repo must show the **My AI Teammate 101 Progress** issue at 6/6 with the generated `CERTIFICATE.svg`.
 - Real merges only — the milestones are verified by the progress bot against actual PRs, alerts, and files.
-- Bonus respect: post your certificate screenshot with `#AITeammate101`.
+- Bonus respect: share your `CERTIFICATE.svg` with `#AITeammate101`.
