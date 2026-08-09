@@ -250,6 +250,15 @@ body {
   display: inline-block;
 }
 
+/* inline <svg class="ti"> icons inside markdown bullets get the brand color */
+.markdown-section li > svg.ti {
+  color: var(--mango-deep);
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.22em;
+  margin-right: 0.4em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .markdown-section { animation: none; }
 }
