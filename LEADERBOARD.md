@@ -5,7 +5,7 @@ Open a PR adding a row (or ask Copilot to do it — obviously).
 
 | # | Builder | Repo with completed scorecard | Favorite module | Date |
 |---|---------|-------------------------------|-----------------|------|
-| 1 | *you?* | | | |
+| 1 | *you?* | *link your repo* | *your pick* | *YYYY-MM-DD* |
 
 ## Rules
 

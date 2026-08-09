@@ -12,10 +12,10 @@ The Coding Agent is available on these plans:
 
 | Plan | Coding Agent? | Notes |
 |---|---|---|
-| Copilot Pro / Pro+ |  | Includes monthly agent allowances |
-| Copilot Business / Enterprise |  | Your org admin may need to enable the policy |
-| Copilot Free |  Limited | See the fallback below |
-| **Verified students** |  **Free Pro** | Via [GitHub Education](https://education.github.com) — if you're a student, claim this first |
+| Copilot Pro / Pro+ | **Yes** | Includes monthly agent allowances |
+| Copilot Business / Enterprise | **Yes** | Your org admin may need to enable the policy |
+| Copilot Free | Limited | See the fallback below |
+| **Verified students** | **Free Pro** | Via [GitHub Education](https://education.github.com) — if you're a student, claim this first |
 
 **How to check:** go to [github.com/settings/copilot](https://github.com/settings/copilot) and look at your plan.
 

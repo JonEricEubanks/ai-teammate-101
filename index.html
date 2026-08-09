@@ -156,19 +156,23 @@
           window.$docsify.plugins = (window.$docsify.plugins || []).concat(
             (hook) => hook.doneEach(run),
           );
-          // also run once after initial load (coverpage + sidebar first paint)
-          window.addEventListener("load", () => setTimeout(run, 300));
+          // also run once after initial load (coverpage + sidebar first paint).
+          // Attach via setTimeout, not the load event — this fetch().then() can
+          // resolve after window.load has already fired, which would never run.
+          setTimeout(run, 300);
           // Docsify re-renders the sidebar asynchronously (after doneEach),
           // which can restore raw :icon: text — re-run the swap on app DOM
-          // changes. The `swapped` guard + rAF debounce prevent loops.
+          // changes. The `swapped` guard + timer debounce prevent loops.
+          // NOTE: setTimeout, not requestAnimationFrame — rAF never fires in
+          // hidden/backgrounded tabs, leaving raw shortcodes stuck on screen.
           let scheduled = false;
           new MutationObserver(() => {
             if (scheduled) return;
             scheduled = true;
-            requestAnimationFrame(() => {
+            setTimeout(() => {
               scheduled = false;
               run();
-            });
+            }, 50);
             // NOTE: Docsify replaces #app entirely, so observe document.body.
           }).observe(document.body, {
             childList: true,
