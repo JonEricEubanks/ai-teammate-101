@@ -25,7 +25,8 @@
   <p class="hero-cta">
     <a class="btn btn-ghost" href="https://github.com/JonEricEubanks/ai-teammate-101">:globe: GitHub</a>
     <a class="btn btn-primary"
-   href="https://github.com/JonEricEubanks/ai-teammate-test-run/blob/main/modules/00-environment-setup/README.md">
+   href="https://github.com/JonEricEubanks/ai-teammate-101/blob/main/modules/00-environment-setup/README.md"
+   target="_blank" rel="noopener">
   Get Started
 </a>
   </p>
