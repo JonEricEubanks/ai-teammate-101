@@ -54,7 +54,7 @@ This template is a [Docsify](https://docsify.js.org) site. To read it as a websi
 1. In your repo, go to **Settings  Pages**.
 2. Select **Pages** on the left sidebar.
 3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, and save.
-4. Wait a minute, then visit `https://<your-username>.github.io/<your-repo-name>/`.
+4. Wait a minute, then visit `https://<your-username>.github.io/my-ai-teammate-workshop/`.
 
 ## 5. Sanity check
 
