@@ -24,6 +24,6 @@
 
   <p class="hero-cta">
     <a class="btn btn-ghost" href="https://github.com/JonEricEubanks/ai-teammate-101">:globe: GitHub</a>
-    <a class="btn btn-primary" href="#/">:play: Get Started</a>
+    <a class="btn btn-primary" href="#/?id=how-to-take-this-workshop">:play: Get Started</a>
   </p>
 </div>
