@@ -24,6 +24,6 @@
 
   <p class="hero-cta">
     <a class="btn btn-ghost" href="https://github.com/JonEricEubanks/ai-teammate-101">:globe: GitHub</a>
-    <a class="btn btn-primary" href="#/?id=ai-teammate-101-delegate-like-a-tech-leadthe button is not working.">:play: Get Started</a>
+    <a class="btn btn-primary" href="#/?id=ai-teammate-101-delegate-like-a-tech-lead">:play: Get Started</a>
   </p>
 </div>
