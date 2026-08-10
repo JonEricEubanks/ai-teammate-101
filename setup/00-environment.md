@@ -24,7 +24,7 @@ The Coding Agent is available on these plans:
 ## 2. Create your own copy of this repo
 
 1. At the top of the template repository, click **Use this template  Create a new repository**.
-2. Name it anything you like (e.g. `my-ai-teammate-workshop`).
+2. Name it `my-ai-teammate-workshop`.
 3. Choose **Public**. *(Required: GitHub's code scanning features used in Module 04 are free on public repos. On private repos they require a GitHub Advanced Security license.)*
 4. Click **Create repository**.
 
@@ -52,8 +52,9 @@ npm run dev
 This template is a [Docsify](https://docsify.js.org) site. To read it as a website instead of raw Markdown:
 
 1. In your repo, go to **Settings  Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, and save.
-3. Wait a minute, then visit `https://<your-username>.github.io/<your-repo-name>/`.
+2. Select **Pages** on the left sidebar.
+3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, and save.
+4. Wait a minute, then visit `https://<your-username>.github.io/<your-repo-name>/`.
 
 ## 5. Sanity check
 
