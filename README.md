@@ -58,13 +58,16 @@ You'll fork this template, then spend the workshop acting as the tech lead of **
 
 ## How to take this workshop
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/JonEricEubanks/ai-teammate-101)
+Before you click anything, skim the steps below so you know the flow of the workshop. If you want to use GitHub Codespaces, you can do that later as an optional setup choice.
 
-1. Click **Use this template  Create a new repository** (top of this page). Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
-2. Work through the modules in order. Each ends with a ** checkpoint** so you know you're on track — and the ** progress bot** tracks your milestones automatically in your copy's Issues.
+1. Click **Use this template → Create a new repository** (top of this page). Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
+2. Work through the modules in order. Each ends with a **checkpoint** so you know you're on track — and the **progress bot** tracks your milestones automatically in your copy's Issues.
 3. Everything happens in *your copy* of this repo. Break things freely.
-4. Finish all 6 milestones  certificate unlocked  claim your spot on the [ Leaderboard](LEADERBOARD.md).
+4. Finish all 6 milestones, unlock your certificate, and claim your spot on the [Leaderboard](LEADERBOARD.md).
 
+If you prefer a browser-based setup, you can also open the repo in GitHub Codespaces:
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/JonEricEubanks/ai-teammate-101)
 ## Prerequisites
 
 - A GitHub account
@@ -79,3 +82,4 @@ You'll fork this template, then spend the workshop acting as the tech lead of **
 ## Contributing
 
 Found friction? Ran it with a class? Open an issue or PR — and yes, assigning the issue to Copilot is an acceptable (encouraged) way to do it. 
+
