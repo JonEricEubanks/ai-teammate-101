@@ -128,7 +128,7 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
    > _My AI Teammate 101 workshop — hands-on practice delegating tasks to GitHub Copilot's coding agent, reviewing its PRs, and earning my Certified AI Tech Lead certificate._
 4. Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
 5. Hit the green **Create repository** button.
-6. Work through the modules in order. Each ends with a **checkpoint**, and the **progress bot** tracks your milestones automatically in your copy's Issues.
+6. Open **Module 00**. Work through the modules in order. Each ends with a **checkpoint**, and the **progress bot** tracks your milestones automatically in your copy's Issues.
 7. Everything happens in _your copy_ of this repo. Break things freely — that's the point.
 8. Finish all 6 milestones &rarr; **certificate unlocked** &rarr; claim your spot on the [Leaderboard](LEADERBOARD.md).
 
