@@ -47,14 +47,15 @@ npm install
 npm run dev
 ```
 
-## 4. (Optional) Publish your copy as a GitHub Pages site
+## 4. Publish your copy as a GitHub Pages site
 
 This template is a [Docsify](https://docsify.js.org) site. To read it as a website instead of raw Markdown:
 
-1. In your repo, go to **Settings  Pages**.
-2. Select **Pages** on the left sidebar.
-3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, and save.
-4. Wait a minute, then visit `https://<your-username>.github.io/my-ai-teammate-workshop/`.
+1. In your repo, go to **Settings &rarr; Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, and save.
+3. Wait a minute, then visit `https://<your-username>.github.io/my-ai-teammate-workshop/`.
+
+> **Already did this in the README?** Skip ahead — you're all set.
 
 ## 5. Sanity check
 
@@ -62,8 +63,9 @@ This template is a [Docsify](https://docsify.js.org) site. To read it as a websi
 
 - [ ] You've confirmed your Copilot plan (or chosen the Free-plan path)
 - [ ] You have your own public copy of this repository
+- [ ] Your copy is live on GitHub Pages (Settings &rarr; Pages)
 - [ ] You've skimmed [`taskmango/docs/seeded-issues.md`](../taskmango/docs/seeded-issues.md)
 
 ---
 
-**Next ** [Module 01: Meet Your AI Teammate](../modules/01-meet-your-ai-teammate/README.md)
+**Next:** [Module 01: Meet Your AI Teammate](../modules/01-meet-your-ai-teammate/README.md)
