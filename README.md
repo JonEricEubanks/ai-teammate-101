@@ -60,10 +60,11 @@ You'll fork this template, then spend the workshop acting as the tech lead of **
 
 Before you click anything, skim the steps below so you know the flow of the workshop. If you want to use GitHub Codespaces, you can do that later as an optional setup choice.
 
-1. Click **Use this template → Create a new repository** (top of this page)→ Name it **my-ai-teammate-workshop**. Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
-2. Work through the modules in order. Each ends with a **checkpoint** so you know you're on track — and the **progress bot** tracks your milestones automatically in your copy's Issues.
-3. Everything happens in *your copy* of this repo. Break things freely.
-4. Finish all 6 milestones, unlock your certificate, and claim your spot on the [Leaderboard](LEADERBOARD.md).
+1. Click **Use this template → Create a new repository** (top of this page)
+2. Name it **my-ai-teammate-workshop**. Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
+3. Work through the modules in order. Each ends with a **checkpoint** so you know you're on track — and the **progress bot** tracks your milestones automatically in your copy's Issues.
+4. Everything happens in *your copy* of this repo. Break things freely.
+5. Finish all 6 milestones, unlock your certificate, and claim your spot on the [Leaderboard](LEADERBOARD.md).
 
 If you prefer a browser-based setup, you can also open the repo in GitHub Codespaces:
 
