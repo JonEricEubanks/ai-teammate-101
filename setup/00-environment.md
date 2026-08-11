@@ -21,14 +21,15 @@ The Coding Agent is available on these plans:
 
 > **On the Free plan?** You can still learn every concept in this workshop: instead of assigning issues to Copilot on GitHub.com, use **Agent mode in VS Code** (free tier includes monthly agent requests) and compare the experience. Each module has a "Free plan path" callout where the steps differ.
 
-## 2. Create your own copy of this repo
+## 2. Verify your own copy of this repo
 
-1. At the top of the template repository, click **Use this template  Create a new repository**.
-2. Name it `my-ai-teammate-workshop`.
-3. Choose **Public**. *(Required: GitHub's code scanning features used in Module 04 are free on public repos. On private repos they require a GitHub Advanced Security license.)*
-4. Click **Create repository**.
+You should already have your own copy from the README. If you don't, go back and do steps 1–5 first.
 
-From here on, **do everything in your copy**, not the original template.
+**Quick check:** look at the URL in your browser. It should be `github.com/<your-username>/my-ai-teammate-workshop`, not `github.com/JonEricEubanks/ai-teammate-101`.
+
+> **Don't have your own copy yet?** Stop here and do the [README quick-start](../README.md#how-to-take-this-workshop) first. You'll create the repo, name it, make it public, and turn on Pages. Then come back.
+
+**If you already have your copy:** you're done with this section. Move on to Section 3.
 
 ## 3. Meet the sample app
 
@@ -62,7 +63,7 @@ This template is a [Docsify](https://docsify.js.org) site. To read it as a websi
  **You're ready for Module 01 when:**
 
 - [ ] You've confirmed your Copilot plan (or chosen the Free-plan path)
-- [ ] You have your own public copy of this repository
+- [ ] You have your own public copy of this repository (check the URL — it should have your username, not JonEricEubanks)
 - [ ] Your copy is live on GitHub Pages (Settings &rarr; Pages)
 - [ ] You've skimmed [`taskmango/docs/seeded-issues.md`](../taskmango/docs/seeded-issues.md)
 
