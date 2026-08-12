@@ -2,11 +2,7 @@
 
 **Time: ~15 minutes** · No hands-on yet — this module gives you the mental model the rest of the workshop builds on.
 
-**Objectives.** By the end of this module you will be able to:
-
-- Place the Coding Agent on the "autonomy spectrum" of Copilot features
-- Describe the four phases of an agent run
-- Decide which tasks are good delegation candidates — and which aren't
+> **You'll leave this page able to:** place the Coding Agent on Copilot's "autonomy spectrum," describe the four phases of an agent run, and judge which tasks are safe to delegate.
 
 ---
 
@@ -25,40 +21,33 @@
 | Agent mode | VS Code | Supervising each step | Multi-file changes you want to watch closely |
 | **Coding Agent** | **GitHub.com** | **Delegating the whole task** | **Well-specified work you'd hand to a teammate** |
 
-The Coding Agent is different in kind, not just degree: you stop supervising keystrokes and start managing **outcomes**. That's why this workshop frames it as a tech-lead skill — because it is one.
+**The takeaway:** the Coding Agent is different in *kind*, not just degree. You stop supervising keystrokes and start managing **outcomes** — which is why this workshop frames it as a tech-lead skill. Because it is one.
 
 ## What a run looks like
 
-When you assign an issue to `@copilot`, four things happen:
+Assign an issue to `@copilot` and four things happen — every one of them visible in the **session log** (every file read, every command run, every test result — nothing happens off-stage):
 
-1. **Activation.** Copilot reacts  on the issue, spins up an isolated GitHub Actions runner, and opens a draft PR on a `copilot/` branch.
-2. **Exploration & planning.** It reads your codebase (using retrieval over the repo, not just the files you mentioned), forms a plan, and writes it into the PR description as a checklist.
-3. **Implementation & self-verification.** It commits incrementally, runs your tests and linters, writes new tests, and iterates when checks fail.
-4. **Review loop.** It marks the PR ready, requests your review, and — crucially — **responds to review comments**, resuming the session to address them.
+| Phase | What the agent does |
+|---|---|
+| **1 · Activation** | Reacts 👀 on the issue, spins up an isolated GitHub Actions runner, opens a draft PR on a `copilot/` branch |
+| **2 · Exploration & planning** | Reads your codebase (retrieval over the whole repo, not just files you mentioned), writes its plan into the PR description as a checklist |
+| **3 · Implementation** | Commits incrementally, runs your tests and linters, writes new tests, iterates when checks fail |
+| **4 · Review loop** | Marks the PR ready, requests your review, and — crucially — **responds to your review comments** |
 
-Everything is visible in the **session log**: every file read, every command run, every test result. Nothing happens off-stage.
+## Delegate it, or keep it human?
 
-## What it's good at (and what it isn't)
+| ✅ Delegate freely | 🙅 Keep a human in the loop |
+|---|---|
+| Well-scoped features ("add X to page Y") | Architecture decisions ("how should auth work?") |
+| Bug fixes with a clear repro | Vague asks ("make it faster", "improve UX") |
+| Test coverage, docs, dependency bumps | Anything touching secrets, infra, or production data |
+| Mechanical refactors, tech-debt paydown | Work where you couldn't review the output |
 
-**Delegate freely:**
+> **The one rule that matters most:** *if you can't tell whether the PR is right, you can't safely delegate the task.* Delegation shifts your job from writing code to specifying and reviewing it — Modules 02 and 03 train exactly those two skills.
 
--  Well-scoped features ("add X to page Y")
--  Bug fixes with a clear repro
--  Test coverage, docs, dependency bumps
--  Mechanical refactors, tech-debt paydown
+## 🧠 Quick check
 
-**Keep a human in the loop:**
-
--  Architecture decisions ("how should auth work?")
--  Vague asks ("make it faster", "improve UX")
--  Anything touching secrets, infra, or production data
--  Work where you couldn't review the output — *if you can't tell whether the PR is right, you can't safely delegate the task*
-
-That last rule is the one that matters most. **Delegation shifts your job from writing code to specifying and reviewing it.** Modules 02 and 03 train exactly those two skills.
-
-##  Quick check
-
-For each task, decide: *delegate to the Coding Agent, or keep it human?* (Answers at the bottom — no peeking.)
+For each task, decide: *delegate to the Coding Agent, or keep it human?*
 
 1. "Add a confirmation dialog before deleting a task."
 2. "Should TaskMango move from localStorage to a real backend?"
@@ -66,17 +55,7 @@ For each task, decide: *delegate to the Coding Agent, or keep it human?* (Answer
 4. "Make the app feel more polished."
 5. "Write unit tests for `TaskFilter.tsx` to reach 80% coverage."
 
-##  Checkpoint
-
-- [ ] You can explain the difference between Agent mode (IDE) and the Coding Agent (GitHub.com) to a colleague in one sentence
-- [ ] You can name the four phases of a run
-- [ ] You scored at least 4/5 on the quick check
-
----
-
-**Next ** [Module 02: Delegate Your First Task](../02-delegate-a-task/README.md)
-
-<details><summary>Quick-check answers</summary>
+<details class="dive"><summary><strong>Check your answers</strong></summary>
 
 1. **Delegate** — well-scoped, visible, testable.
 2. **Human** — that's an architecture call. (You might ask Copilot *chat* for input, but you decide.)
@@ -85,3 +64,13 @@ For each task, decide: *delegate to the Coding Agent, or keep it human?* (Answer
 5. **Delegate** — the single best first real-world use of a coding agent.
 
 </details>
+
+## ✅ Checkpoint
+
+- [ ] You can explain the difference between Agent mode (IDE) and the Coding Agent (GitHub.com) to a colleague in one sentence
+- [ ] You can name the four phases of a run
+- [ ] You scored at least 4/5 on the quick check
+
+---
+
+**Next →** [Module 02: Delegate Your First Task](../02-delegate-a-task/README.md) — run the full loop for real.

@@ -318,6 +318,63 @@ body {
   cursor: zoom-in;
 }
 
+/* ---- Collapsible "deep dive" panels -------------------------------- */
+/* Optional theory/context the learner can skip: same design language as
+   details.shot, but amber-accented with a book icon, and holding rich
+   markdown content instead of a screenshot. */
+.markdown-section details.dive {
+  margin: 0.6rem 0 1rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--mango-deep, #ff7b1c);
+  border-radius: 10px;
+  background: var(--panel, #fbfdfc);
+  overflow: hidden;
+}
+.markdown-section details.dive > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--mango-deep, #ff7b1c);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  user-select: none;
+}
+.markdown-section details.dive > summary::-webkit-details-marker { display: none; }
+/* leading "book" icon as an inline SVG mask (no emoji font reliance) */
+.markdown-section details.dive > summary::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  background: currentColor;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>') center / contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>') center / contain no-repeat;
+}
+/* trailing chevron that rotates when open */
+.markdown-section details.dive > summary::after {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: auto;
+  flex: 0 0 auto;
+  background: var(--muted, #6b7f88);
+  transition: transform 0.18s ease;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>') center / contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>') center / contain no-repeat;
+}
+.markdown-section details.dive[open] > summary::after { transform: rotate(90deg); }
+.markdown-section details.dive > summary:hover { background: rgba(255, 123, 28, 0.07); }
+/* inner padding for the revealed markdown content */
+.markdown-section details.dive > *:not(summary) {
+  margin-left: 0.9rem;
+  margin-right: 0.9rem;
+}
+.markdown-section details.dive > summary + * { margin-top: 0.6rem; }
+.markdown-section details.dive > *:last-child { margin-bottom: 0.8rem; }
+
 /* Lightbox overlay for enlarging any img.shot */
 #shot-lightbox {
   position: fixed;

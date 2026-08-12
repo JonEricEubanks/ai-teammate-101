@@ -4,12 +4,7 @@
 
 One specialist agent is a hire. A *team* of specialists — working in parallel without stepping on each other — is an engineering org. This module teaches you to build the second one, using TaskMango as the company.
 
-**Objectives.** By the end of this module you will be able to:
-
-- Decompose a feature into non-overlapping agent assignments (the skill that makes parallelism safe)
-- Orchestrate multiple custom agents with subagent handoffs
-- Use GitHub Actions fan-out/fan-in to coordinate agent work
-- Arbitrate conflicts between agent PRs with rules, not vibes
+> **You'll leave this page able to:** decompose a feature into non-overlapping agent assignments, orchestrate custom agents with subagent handoffs, and arbitrate conflicts between agent PRs with rules, not vibes.
 
 ---
 
@@ -31,7 +26,7 @@ A good partition:
 | `test-engineer` (you have this one!) | `src/components/StatsBar.test.tsx` | production source |
 | `docs-writer` | `taskmango/README.md` | anything under `src/` |
 
->  This is the exam's first multi-agent rule: **define responsibilities narrowly enough to enforce through path boundaries.** Parallelism without isolation is just a merge-conflict generator.
+> 💡 This is the exam's first multi-agent rule: **define responsibilities narrowly enough to enforce through path boundaries.** Parallelism without isolation is just a merge-conflict generator.
 
 ## Lab 7.2 — Fan out, for real
 
@@ -55,7 +50,7 @@ handoffs:
 
 Now re-dispatch the stats-bar feature to `feature-dev` alone — and watch it *hand off* to your test engineer when it's done. One task in, a coordinated two-agent pipeline out.
 
->  **Honesty box:** subagent handoff support is one of the newest, fastest-moving parts of Copilot. If your environment doesn't surface it yet, Lab 7.2's parallel-issues approach achieves the same coordination with 2019-era GitHub primitives. Knowing *both* is the actual skill.
+> ⚠️ **Honesty box:** subagent handoff support is one of the newest, fastest-moving parts of Copilot. If your environment doesn't surface it yet, Lab 7.2's parallel-issues approach achieves the same coordination with 2019-era GitHub primitives. Knowing *both* is the actual skill.
 
 ## Lab 7.4 — Arbitrate like a professional
 
@@ -65,22 +60,24 @@ Two agent PRs are open. Merge the feature PR first. Now the test PR probably con
 2. **If a real conflict:** leave `@copilot` feedback on the surviving PR explaining the merged state — agents rebase and adapt remarkably well when told what changed.
 3. **If two PRs solve the same problem differently:** pick one, close the other with a kind comment. Rule: *escalate after two failed automated resolutions* — don't let agents thrash.
 
-##  Checkpoint
+## ✅ Checkpoint
 
 - [ ] Three specialists ran with zero overlapping file ownership
 - [ ] You merged ≥2 agent PRs in a deliberate order and arbitrated the fallout
 - [ ] You attempted (or read the session log of) a subagent handoff
 - [ ] Every merged PR passed the plan gate from Module 06
 
-##  Reflection
+<details class="dive"><summary><strong>💭 Reflection — three questions worth a minute each</strong></summary>
 
 1. Which broke first under parallelism: the agents, or your partition? What does that tell you about scaling this to a real team?
 2. When would you choose fan-out via issues vs. subagent handoffs? (Hint: which one leaves a better audit trail?)
 3. Multi-agent systems are observability systems. What evidence would you need to reconstruct today's session in six months?
 
+</details>
+
 ---
 
-##  You finished the whole track
+## 🎉 You finished the whole track
 
 You went from *"assign an issue to a robot"* to *orchestrating a governed multi-agent team* — with the audit trail, the gates, and the certificate to prove it. What's next is yours: point this at a real codebase, write a talk about it, or go take GH-600 and make it official.
 

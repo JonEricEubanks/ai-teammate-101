@@ -37,10 +37,12 @@ You should already have your own copy from the README. If you don't, go back and
 
 Your copy contains a folder called [`taskmango/`](../taskmango) — a small React + TypeScript task tracker. It runs entirely in the browser (no backend, no database), stores tasks in `localStorage`, and — by design — ships with:
 
--  A couple of real bugs
--  Incomplete test coverage
--  One genuine security vulnerability (you'll fix it with AI in Module 04)
--  A [seeded issue backlog](../taskmango/docs/seeded-issues.md) of tasks ready to delegate
+- 🐛 A couple of real bugs
+- 🧪 Incomplete test coverage
+- 🔓 One genuine security vulnerability (you'll fix it with AI in Module 04)
+- 📋 A [seeded issue backlog](../taskmango/docs/seeded-issues.md) of tasks ready to delegate
+
+<details class="dive"><summary><strong>Optional — run TaskMango locally</strong></summary>
 
 You don't need to run TaskMango locally for this workshop — but if you want to see it live:
 
@@ -49,6 +51,8 @@ cd taskmango
 npm install
 npm run dev
 ```
+
+</details>
 
 ## 4. Publish your copy as a GitHub Pages site
 
@@ -62,7 +66,7 @@ This template is a [Docsify](https://docsify.js.org) site. To read it as a websi
 
 ## 5. Sanity check
 
- **You're ready for Module 01 when:**
+✅ **You're ready for Module 01 when:**
 
 - [ ] You've confirmed your Copilot plan (or chosen the Free-plan path)
 - [ ] You have your own public copy of this repository (check the URL — it should have your username, not JonEricEubanks)
@@ -71,4 +75,4 @@ This template is a [Docsify](https://docsify.js.org) site. To read it as a websi
 
 ---
 
-**Next:** [Module 01: Meet Your AI Teammate](../modules/01-meet-your-ai-teammate/README.md)
+**Next →** [Module 01: Meet Your AI Teammate](../modules/01-meet-your-ai-teammate/README.md)

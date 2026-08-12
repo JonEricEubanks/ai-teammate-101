@@ -1,4 +1,4 @@
-#  Capstone: Run the Loop Solo
+# 🏆 Capstone: Run the Loop Solo
 
 **Time: ~45 minutes**
 
@@ -52,13 +52,13 @@ Hit 6/6 and the progress bot generates a personalized, downloadable certificate 
 
 Want to see a finished run end-to-end before you start? Here's a complete example: the [scorecard at 6/6](https://github.com/JonEricEubanks/ai-teammate-test-run/issues/1), the [generated certificate](https://github.com/JonEricEubanks/ai-teammate-test-run/blob/main/CERTIFICATE.svg), and the [retro](https://github.com/JonEricEubanks/ai-teammate-test-run/blob/main/RETRO.md) — all in one repo.
 
->  **Facilitators:** the retro + two merged PRs are the completion evidence if you're running this as a graded workshop.
+> 📣 **Facilitators:** the retro + two merged PRs are the completion evidence if you're running this as a graded workshop.
 
 ---
 
-##  You're done
+## 🎉 You're done
 
-You've done the full loop: spec  delegate  observe  review  iterate  merge  reflect. Most working developers haven't. Take TaskMango's remaining backlog issues if you want reps — or better, point everything you learned at a project you actually care about.
+You've done the full loop: spec → delegate → observe → review → iterate → merge → reflect. Most working developers haven't. Take TaskMango's remaining backlog issues if you want reps — or better, point everything you learned at a project you actually care about.
 
 **Where next:**
 

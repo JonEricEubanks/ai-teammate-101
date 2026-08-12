@@ -8,22 +8,11 @@ This is the heart of the workshop. You'll run the complete autonomous developmen
   <img src="/ai-teammate-101/assets/diagram-loop.svg" alt="The delegation loop from issue to merged PR" width="780" />
 </p>
 
-**Objectives.** By the end of this module you will be able to:
-
-- Write an issue with enough context for an autonomous agent to succeed
-- Assign an issue to Copilot and recognize the signals that it's working
-- Read session logs to understand *how* the agent approached your task
-- Review the resulting pull request and merge it
+> **You'll leave this page able to:** write an issue an agent can execute, assign it to Copilot, read the session log, and review + merge the resulting PR.
 
 ---
 
-##  The task
-
-The four phases of an agent run, at a glance:
-
-<p align="center">
-  <img src="/ai-teammate-101/assets/diagram-phases.svg" alt="Assignment, autonomous development, quality check, then PR and review" width="820" />
-</p>
+## 🎯 The task
 
 TaskMango's filter bar (`All / Active / Completed`) tells you *which* filter you're on, but not *how many tasks* are behind each one. Your users (okay, you) want counts:
 
@@ -31,15 +20,25 @@ TaskMango's filter bar (`All / Active / Completed`) tells you *which* filter you
 
 Small. Visible. Well-defined. Perfect first delegation.
 
-> **🆓 Free plan path:** instead of the GitHub.com steps below, open your copy of the repo in VS Code, open Copilot Chat in **Agent mode**, and paste the same issue text. The rest of this module — reviewing the diff, checking tests — applies the same way. The GitHub.com flow is worth returning to once you have access.
+<details class="dive"><summary><strong>How this maps to the four phases of an agent run</strong></summary>
+
+<p align="center">
+  <img src="/ai-teammate-101/assets/diagram-phases.svg" alt="Assignment, autonomous development, quality check, then PR and review" width="820" />
+</p>
+
+You'll trigger **assignment** in Lab 2.2, watch **autonomous development** and the **quality check** in Lab 2.3, and close the **PR & review** phase in Lab 2.4.
+
+</details>
+
+> **🆓 Free plan path:** instead of the GitHub.com steps below, open your copy of the repo in VS Code, open Copilot Chat in **Agent mode**, and paste the same issue text. The rest of this module — reviewing the diff, checking tests — applies the same way.
 
 ---
 
 ## Lab 2.1 — Write an issue an agent can execute
 
-An autonomous agent can't ask you clarifying questions mid-flight (well — it *can*, but the round-trip costs you the whole point of delegating). Your issue body is the spec. Put the care in up front.
+An autonomous agent can't ask you clarifying questions mid-flight (well — it *can*, but the round-trip costs you the whole point of delegating). **Your issue body is the spec.**
 
-1. In **your copy** of the repo, open the **Issues** tab  **New issue**.
+1. In **your copy** of the repo, open the **Issues** tab → **New issue**.
 2. Title: `Show task counts in the filter bar`
 3. Body — copy this, then read it critically before submitting:
 
@@ -66,7 +65,9 @@ contains, so I can see my workload at a glance.
 - Run tests with `npm test` from the `taskmango/` folder
 ````
 
-Notice what this spec does, because you'll do it forever after this workshop:
+> ⚠️ **Anti-pattern to avoid:** "make the filters better." An agent given a vague task will produce *a* change — just probably not the one you wanted. Ambiguity in, entropy out.
+
+<details class="dive"><summary><strong>Why each part of this spec earns its place</strong></summary>
 
 | Element | Why the agent needs it |
 |---|---|
@@ -75,14 +76,16 @@ Notice what this spec does, because you'll do it forever after this workshop:
 | **Pointers into the codebase** | Saves the agent exploration time and prevents it from guessing file layout |
 | **How to verify** | `npm test` tells it how to prove its own work |
 
->  **Anti-pattern to avoid:** "make the filters better." An agent given a vague task will produce *a* change — just probably not the one you wanted. Ambiguity in, entropy out.
+You'll write specs like this forever after this workshop.
+
+</details>
 
 ## Lab 2.2 — Hand it off
 
 1. On the new issue, open the **Assignees** section in the right sidebar.
 2. Select **Copilot**.
 3. In the assignment dialog, confirm the repository and base branch (`main`) are correct, then confirm.
-4. Within a few seconds, Copilot adds a ** reaction** to the issue. That emoji is your "ticket acknowledged."
+4. Within a few seconds, Copilot adds a **👀 reaction** to the issue. That emoji is your "ticket acknowledged."
 
 <details class="shot"><summary>What you'll see — Copilot assigned, ticket acknowledged</summary>
 <img class="shot" src="/ai-teammate-101/assets/shots/m02-issue-assigned.png" alt="Issue with Copilot listed under Assignees and the eyes reaction on the issue body" />
@@ -93,7 +96,7 @@ Behind the scenes, Copilot spins up a sandboxed GitHub Actions environment with 
 ## Lab 2.3 — Watch it think (session logs)
 
 1. Copilot opens a **draft pull request** linked from the issue's sidebar (Development section) and timeline. If the link isn't there yet, wait ~30 seconds and refresh.
-2. Open the PR. Note that it's a **draft** — work in progress — and that Copilot wrote the PR description itself, including a task checklist it will tick off as it goes.
+2. Open the PR. Note that it's a **draft**, and that Copilot wrote the PR description itself — including a task checklist it ticks off as it goes.
 3. In the PR timeline, click **View session**.
 
 <details class="shot"><summary>What you'll see — the draft PR appears in the sidebar and timeline</summary>
@@ -108,10 +111,10 @@ This is the part most people skip and shouldn't. The session log is the agent's 
 
 - [ ] **Exploration** — which files did it read first? Did it find `TaskFilter.tsx` quickly, or wander?
 - [ ] **Planning** — did its stated plan match your acceptance criteria *before* it wrote code?
-- [ ] **Verification** — did it actually run `npm test`? Did the tests pass? Did it write the new test you asked for?
-- [ ] **Recovery** — if it hit an error (a failing test, a type error), how did it respond? This is where you learn whether to trust it with bigger tasks.
+- [ ] **Verification** — did it actually run `npm test`? Did it write the new test you asked for?
+- [ ] **Recovery** — if it hit an error, how did it respond? This is where you learn whether to trust it with bigger tasks.
 
->  **Why this matters:** trusting an agent isn't faith, it's evidence. Session logs are the evidence. Get fluent at reading them now, on a tiny task, so you can skim them later on big ones.
+> 💡 **Why this matters:** trusting an agent isn't faith, it's evidence. Session logs are the evidence. Get fluent at reading them now, on a tiny task, so you can skim them later on big ones.
 
 Copilot typically takes 3–10 minutes for a task this size. While it works, you could preview [Module 03](../03-become-the-tech-lead/README.md) — or just watch. First time, watching is half the fun.
 
@@ -134,36 +137,40 @@ Open the **Files changed** tab and work through this rubric (you'll get a fuller
 
 Then leave a review — even if it's an approval:
 
-- **If it's right:** approve, then **Merge pull request  Confirm merge**. You just shipped code you didn't write, through the same process you'd use for a human teammate.
-- **If it's close but wrong:** leave a review comment **mentioning `@copilot`** describing what's off (e.g. "counts don't update when a task is deleted — check the delete path in App.tsx"). Copilot picks the comment up, resumes the session, and pushes new commits. Watch it happen in the timeline.
+- **If it's right:** approve, then **Merge pull request → Confirm merge**. You just shipped code you didn't write, through the same process you'd use for a human teammate.
+- **If it's close but wrong:** leave a review comment **mentioning `@copilot`** describing what's off (e.g. "counts don't update when a task is deleted — check the delete path in App.tsx"). Copilot picks the comment up, resumes the session, and pushes new commits.
 
->  **Try it on purpose:** even if the PR looks fine, leave one small piece of feedback — ask for a style tweak or an extra edge-case test. Watching the agent iterate on review feedback is the single most instructive part of this module.
+> 💡 **Try it on purpose:** even if the PR looks fine, leave one small piece of feedback — ask for a style tweak or an extra edge-case test. Watching the agent iterate on review feedback is the single most instructive part of this module.
 
-##  Checkpoint
+## ✅ Checkpoint
 
 You're done with Module 02 when:
 
-- [ ] Your issue got a  from Copilot
+- [ ] Your issue got a 👀 from Copilot
 - [ ] A `copilot/…` branch PR appeared, moved from draft to ready-for-review
 - [ ] You read the session log and found the moment it ran the tests
 - [ ] You left at least one piece of review feedback and saw the agent respond
 - [ ] The filter bar in your merged `main` shows live counts
 
-## 🆘 Troubleshooting
+<details class="dive"><summary><strong>🆘 Troubleshooting — if something's stuck, look here</strong></summary>
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| Copilot doesn't appear in Assignees | Plan doesn't include coding agent, or org policy blocks it | Check [setup](../..//setup/00-environment.md); org repos need the policy enabled by an admin |
-| No  after several minutes | Agent capacity/queue delay | Wait, or unassign/reassign; check githubstatus.com |
+| Copilot doesn't appear in Assignees | Plan doesn't include coding agent, or org policy blocks it | Check [setup](../../setup/00-environment.md); org repos need the policy enabled by an admin |
+| No 👀 after several minutes | Agent capacity/queue delay | Wait, or unassign/reassign; check githubstatus.com |
 | PR exists but session seems stuck | The agent is rate-limited mid-session | It usually resumes on its own; check the session log's last entry |
 | The change looks wrong in a way feedback didn't fix | Spec ambiguity | Close the PR, rewrite the issue with tighter acceptance criteria, reassign. Rewriting the spec is a legitimate, cheap iteration strategy |
 
-##  Reflection
+</details>
+
+<details class="dive"><summary><strong>💭 Reflection — three questions worth a minute each</strong></summary>
 
 1. What did you put in the issue that the agent clearly *used*? What did it ignore?
 2. Reading the session log, where did the agent's approach differ from how *you* would have done it? Was its way worse, or just different?
 3. How long did the whole loop take — and how much of that was *your* time versus waiting time? What would you do with the waiting time in a real project?
 
+</details>
+
 ---
 
-**Next ** [Module 03: Be the Tech Lead](../03-become-the-tech-lead/README.md) — now do three of these at once, and learn to review at speed.
+**Next →** [Module 03: Be the Tech Lead](../03-become-the-tech-lead/README.md) — now do three of these at once, and learn to review at speed.
