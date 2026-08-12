@@ -122,9 +122,7 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 
 > **Skim first, click second.** Here's the whole flow before you touch anything:
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/use-this-template.gif" alt="Use this template walkthrough" width="640" />
-</p>
+![Use this template walkthrough](https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/use-this-template.gif)
 
 1. **Use this template &rarr; Create a new repository** (button at the top of this page).
 2. Name it **`my-ai-teammate-workshop`**.
@@ -134,9 +132,7 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 5. Hit the green **Create repository** button.
 6. **Turn your copy into a website** (60 seconds): go to **Settings &rarr; Pages &rarr; Deploy from a branch &rarr; `main` / `(root)` &rarr; Save**. Then open `https://<your-username>.github.io/my-ai-teammate-workshop/` — this is how you'll read the workshop.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/github-pages-settings.gif" alt="Open Settings and Pages to publish the workshop as a website" width="640" />
-</p>
+![Open Settings and Pages to publish the workshop as a website](https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/github-pages-settings.gif)
 
 7. Open **[Module 00](setup/00-environment.md)**. Work through the modules in order. Each ends with a **checkpoint**, and the **progress bot** tracks your milestones automatically in your copy's Issues.
 8. Everything happens in _your copy_ of this repo. Break things freely — that's the point.
