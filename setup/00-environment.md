@@ -58,6 +58,15 @@ npm run dev
 
 This template is a [Docsify](https://docsify.js.org) site. To read it as a website instead of raw Markdown:
 
+<details class="dive"><summary><strong>📹 Walkthrough: publish the site</strong></summary>
+<br/>
+
+<p align="center">
+  <img src="../assets/shots/github-pages-settings.gif" alt="Open Settings and Pages to publish the workshop as a website" width="900" />
+</p>
+
+</details>
+
 1. In your repo, go to **Settings &rarr; Pages**.
 2. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, and save.
 3. Wait a minute, then visit `https://<your-username>.github.io/my-ai-teammate-workshop/`.
