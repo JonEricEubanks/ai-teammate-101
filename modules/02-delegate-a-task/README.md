@@ -82,10 +82,14 @@ You'll write specs like this forever after this workshop.
 
 ## Lab 2.2 — Hand it off
 
-1. On the new issue, open the **Assignees** section in the right sidebar.
+1. On the new issue, open the **Assignees** (⚙️gear icon) section in the right sidebar.
 2. Select **Copilot**.
-3. In the assignment dialog, confirm the repository and base branch (`main`) are correct, then confirm.
+3. In the assignment dialog, confirm the repository and base branch (`main`) are correct, leave **Optional prompt** empty — the issue body you wrote in Lab 2.1 is the complete spec — then click **Assign**.
 4. Within a few seconds, Copilot adds a **👀 reaction** to the issue. That emoji is your "ticket acknowledged."
+
+<details class="shot"><summary>What you'll see — the "Assign agent to issue" dialog</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m02-assign-dialog.png" alt="Assign agent to issue dialog showing the optional prompt box left empty, the repository and main branch selected, and the Assign button" />
+</details>
 
 <details class="shot"><summary>What you'll see — Copilot assigned, ticket acknowledged</summary>
 <img class="shot" src="/ai-teammate-101/assets/shots/m02-issue-assigned.png" alt="Issue with Copilot listed under Assignees and the eyes reaction on the issue body" />
