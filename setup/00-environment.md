@@ -62,7 +62,7 @@ This template is a [Docsify](https://docsify.js.org) site. To read it as a websi
 <br/>
 
 <p align="center">
-  <img class="shot" src="/ai-teammate-101/assets/shots/github-pages-settings.gif" alt="Open Settings and Pages to publish the workshop as a website" />
+  <img src="/ai-teammate-101/assets/shots/github-pages-settings.gif" alt="Open Settings and Pages to publish the workshop as a website" width="640" />
 </p>
 
 </details>
