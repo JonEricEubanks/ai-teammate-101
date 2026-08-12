@@ -27,6 +27,8 @@ You should already have your own copy from the README. If you don't, go back and
 
 **Quick check:** look at the URL in your browser. It should be `github.com/<your-username>/my-ai-teammate-workshop`, not `github.com/JonEricEubanks/ai-teammate-101`.
 
+> **Don't know your username?** Click your profile picture in the top-right of GitHub — your username is right there in the dropdown menu. It's also in the URL when you visit your profile page.
+
 > **Don't have your own copy yet?** Stop here and do the [README quick-start](../README.md#how-to-take-this-workshop) first. You'll create the repo, name it, make it public, and turn on Pages. Then come back.
 
 **If you already have your copy:** you're done with this section. Move on to Section 3.
