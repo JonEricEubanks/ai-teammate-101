@@ -126,7 +126,7 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 <br/>
 
 <p align="center">
-  <img src="assets/shots/use-this-template.gif" alt="Use this template walkthrough" width="900" />
+  <img class="shot" src="/ai-teammate-101/assets/shots/use-this-template.gif" alt="Use this template walkthrough" />
 </p>
 
 </details>
@@ -143,7 +143,7 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 <br/>
 
 <p align="center">
-  <img src="assets/shots/github-pages-settings.gif" alt="Open Settings and Pages to publish the workshop as a website" width="900" />
+  <img class="shot" src="/ai-teammate-101/assets/shots/github-pages-settings.gif" alt="Open Settings and Pages to publish the workshop as a website" />
 </p>
 
 </details>
