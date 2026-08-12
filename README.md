@@ -122,15 +122,16 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 
 > **Skim first, click second.** Here's the whole flow before you touch anything:
 
+1. **Use this template &rarr; Create a new repository** (button at the top of this page).
+   
 ![Use this template walkthrough](https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/use-this-template.gif)
 
-1. **Use this template &rarr; Create a new repository** (button at the top of this page).
-2. Name it **`my-ai-teammate-workshop`**.
-3. For **Description**, copy-paste:
+3. Name it **`my-ai-teammate-workshop`**.
+4. For **Description**, copy-paste:
    > _My AI Teammate 101 workshop — hands-on practice delegating tasks to GitHub Copilot's coding agent, reviewing its PRs, and earning my Certified AI Tech Lead certificate._
-4. Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
-5. Hit the green **Create repository** button.
-6. **Turn your copy into a website** (60 seconds): go to **Settings &rarr; Pages &rarr; Deploy from a branch &rarr; `main` / `(root)` &rarr; Save**. Then open `https://<your-username>.github.io/my-ai-teammate-workshop/` — this is how you'll read the workshop.
+5. Make it **public** — code scanning is free on public repos, and you'll need it in Module 04.
+6. Hit the green **Create repository** button.
+7. **Turn your copy into a website** (60 seconds): go to **Settings &rarr; Pages &rarr; Deploy from a branch &rarr; `main` / `(root)` &rarr; Save**. Then open `https://<your-username>.github.io/my-ai-teammate-workshop/` — this is how you'll read the workshop.
 
 ![Open Settings and Pages to publish the workshop as a website](https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/github-pages-settings.gif)
 
