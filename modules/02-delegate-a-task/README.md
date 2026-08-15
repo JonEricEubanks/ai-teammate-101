@@ -101,7 +101,8 @@ Behind the scenes, Copilot spins up a sandboxed GitHub Actions environment with 
 
 1. Copilot opens a **draft pull request** linked from the issue's sidebar (Development section) and timeline. If the link isn't there yet, wait ~30 seconds and refresh.
 2. Open the PR. Note that it's a **draft**, and that Copilot wrote the PR description itself — including a task checklist it ticks off as it goes.
-3. In the PR timeline, click **View session**.
+3. In the **Commits** tab you'll see an **"Initial plan"** commit at the top — this is a placeholder Copilot creates before writing any code. It has no file changes; the real diff is in the commits below it.
+4. In the PR timeline, click **View session**.
 
 <details class="shot"><summary>What you'll see — the draft PR appears in the sidebar and timeline</summary>
 <img class="shot" src="/ai-teammate-101/assets/shots/m02-pr-ready.png" alt="Draft pull request opened by Copilot with its own description and task checklist" />
@@ -141,7 +142,7 @@ Open the **Files changed** tab and work through this rubric (you'll get a fuller
 
 Then leave a review — even if it's an approval:
 
-- **If it's right:** approve, then **Merge pull request → Confirm merge**. You just shipped code you didn't write, through the same process you'd use for a human teammate.
+- **If it's right:** approve, then click **Ready for review** to promote the draft. You may also see a **"7 workflows awaiting approval"** notice — click **Approve workflows to run** so CI can execute. Once both are done, **Merge pull request → Confirm merge**. You just shipped code you didn't write, through the same process you'd use for a human teammate.
 - **If it's close but wrong:** leave a review comment **mentioning `@copilot`** describing what's off (e.g. "counts don't update when a task is deleted — check the delete path in App.tsx"). Copilot picks the comment up, resumes the session, and pushes new commits.
 
 > 💡 **Try it on purpose:** even if the PR looks fine, leave one small piece of feedback — ask for a style tweak or an extra edge-case test. Watching the agent iterate on review feedback is the single most instructive part of this module.

@@ -10,12 +10,69 @@ One delegated task is a demo. Three delegated tasks — running in parallel whil
 
 ## Lab 3.1 — Fan out
 
-You have a backlog. Open [`taskmango/docs/seeded-issues.md`](../../taskmango/docs/seeded-issues.md) and pick **two more issues** (good picks: *#2 wrong-task deletion bug* and *#3 reject empty tasks* — they're independent).
+You have a backlog. Pick **two issues** below (they're independent and intentionally sized for parallel sessions). Use the seeded text, but **write the acceptance criteria yourself** — that's the skill being trained.
+
+<details><summary><strong>#2 · Deleting a task in a filtered view removes the wrong task</strong></summary>
+
+**Title**
+```
+Deleting a task in a filtered view removes the wrong task
+```
+
+**Body**
+```markdown
+## Bug report
+
+**Repro:**
+1. Add three tasks: "one", "two", "three"
+2. Complete "one"
+3. Switch to the "Active" filter
+4. Delete "two" (the first visible task)
+
+**Expected:** "two" is deleted.
+**Actual:** a different task disappears.
+
+## Context
+
+`deleteTask` in `src/App.tsx` receives an index into the *filtered* list but
+applies it to the *full* list. Fix by deleting by task `id` instead.
+
+## Acceptance criteria
+
+- [ ] <write them yourself>
+- [ ] Regression test: deleting from a filtered view removes the right task
+```
+
+</details>
+
+<details><summary><strong>#3 · Reject empty or whitespace-only tasks</strong></summary>
+
+**Title**
+```
+Reject empty or whitespace-only tasks
+```
+
+**Body**
+```markdown
+## Enhancement
+
+The add form currently accepts empty and whitespace-only input, creating
+blank tasks.
+
+## Acceptance criteria
+
+- [ ] <write them yourself>
+- [ ] Hint: also consider disabling the Add button for invalid input
+- [ ] Unit test covers the rejection
+```
+
+</details>
 
 For each one:
 
-1. Create the issue in your repo. Use the seeded text, but **write the acceptance criteria yourself** — that's the skill being trained.
-2. Assign it to Copilot.
+1. Create the issue in your repo and paste in the text above.
+2. Write your own acceptance criteria where marked.
+3. Assign it to Copilot.
 
 You now have (at least) two agent sessions running in parallel. Notice what just happened to your role: you're not implementing anything. You're **specifying, dispatching, and (soon) reviewing**. That inversion is the entire lesson.
 
@@ -52,6 +109,12 @@ Then decide:
 - **Fundamentally wrong approach →** close the PR, tighten the spec, redelegate. *Closing a bad agent PR costs nothing. Merging it costs you the codebase.*
 
 **Also try this:** add **Copilot as a reviewer** on one of the PRs (Reviewers → Copilot). It will analyze the diff and leave comments — effectively a second opinion from another AI. Useful, with a caveat you'll discuss below.
+
+> 💡 Once added, Copilot will automatically post a review comment on the PR — you don’t need to trigger it manually. You may also see a suggestion to "Add a `code-review` agent skill" for more context-aware reviews; ignore it for now. Read Copilot’s comments as part of your rubric, then proceed to approve and merge as normal.
+
+<details class="shot"><summary>What you'll see — requesting a Copilot review</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m03-copilot-reviewer.gif" alt="Reviewers sidebar showing Copilot Lite with a Request link to add it as a reviewer" />
+</details>
 
 ## ✅ Checkpoint
 

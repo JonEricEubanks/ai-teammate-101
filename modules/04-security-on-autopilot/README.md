@@ -22,8 +22,8 @@ This line renders every task's text as raw HTML instead of plain text. That mean
 
 This bug is planted here on purpose. **Do not fix it by hand.** In the next two labs, you'll let the scanner find it and let Copilot Autofix generate the fix as a PR.
 
-<details class="shot"><summary>What you'll see — the vulnerable line in TaskItem.tsx</summary>
-<img class="shot" src="/ai-teammate-101/assets/shots/m04-xss-code.png" alt="TaskItem.tsx open on GitHub showing the dangerouslySetInnerHTML line" />
+<details class="shot"><summary>What you'll see — the vulnerable line and its effect in the app</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m04-xss-sidebyside.png" alt="Side by side: TaskItem.tsx on GitHub with line 21 highlighted on the left, and the TaskMango app showing a broken image in the task list on the right" />
 </details>
 
 ## Lab 4.1 — Turn on the scanner
