@@ -102,22 +102,6 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 
 ---
 
-## Module map
-
-| # | Module | Time | You'll learn to… |
-|---|--------|------|------------------|
-| 00 | [Environment setup](setup/00-environment.md) | 15 min | Get your repo, license, and tooling ready |
-| 01 | [Meet Your AI Teammate](modules/01-meet-your-ai-teammate/README.md) | 15 min | Understand what Coding Agent is (and isn't) |
-| 02 | [Delegate Your First Task](modules/02-delegate-a-task/README.md) | 30 min | Run the full loop: issue &rarr; agent &rarr; PR &rarr; merge |
-| 03 | [Be the Tech Lead](modules/03-become-the-tech-lead/README.md) | 30 min | Delegate in parallel & review AI code with a rubric |
-| 04 | [Security on Autopilot](modules/04-security-on-autopilot/README.md) | 25 min | Use CodeQL + Copilot Autofix on a real vulnerability |
-| 05 | [Build a Specialist Agent](modules/05-customize-your-agent/README.md) | 25 min | Create a custom agent tuned to your workflow |
-| ★ | [Capstone](capstone/README.md) | 45 min | Ship two delegated tasks end-to-end, solo |
-| 06 | [New Game+: Govern Your Agents](modules/06-new-game-plus/README.md) | 40 min | Plan gates, CODEOWNERS, least privilege, anti-patterns |
-| 07 | [Multi-Agent Orchestration](modules/07-multi-agent-orchestration/README.md) | 45 min | Fan-out/fan-in, subagent handoffs, conflict arbitration |
-
----
-
 ## How to take this workshop
 
 > **Skim first, click second.** Here's the whole flow before you touch anything:
@@ -158,6 +142,22 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/JonEricEubanks/ai-teammate-101)
 
 </details>
+
+---
+
+## Module map
+
+| # | Module | Time | You'll learn to… |
+|---|--------|------|------------------|
+| 00 | [Environment setup](setup/00-environment.md) | 15 min | Get your repo, license, and tooling ready |
+| 01 | [Meet Your AI Teammate](modules/01-meet-your-ai-teammate/README.md) | 15 min | Understand what Coding Agent is (and isn't) |
+| 02 | [Delegate Your First Task](modules/02-delegate-a-task/README.md) | 30 min | Run the full loop: issue &rarr; agent &rarr; PR &rarr; merge |
+| 03 | [Be the Tech Lead](modules/03-become-the-tech-lead/README.md) | 30 min | Delegate in parallel & review AI code with a rubric |
+| 04 | [Security on Autopilot](modules/04-security-on-autopilot/README.md) | 25 min | Use CodeQL + Copilot Autofix on a real vulnerability |
+| 05 | [Build a Specialist Agent](modules/05-customize-your-agent/README.md) | 25 min | Create a custom agent tuned to your workflow |
+| ★ | [Capstone](capstone/README.md) | 45 min | Ship two delegated tasks end-to-end, solo |
+| 06 | [New Game+: Govern Your Agents](modules/06-new-game-plus/README.md) | 40 min | Plan gates, CODEOWNERS, least privilege, anti-patterns |
+| 07 | [Multi-Agent Orchestration](modules/07-multi-agent-orchestration/README.md) | 45 min | Fan-out/fan-in, subagent handoffs, conflict arbitration |
 
 ---
 
