@@ -10,13 +10,21 @@ So far you've delegated *features*. Now you'll delegate a *vulnerability fix* �
 
 ## 🎯 The planted vulnerability
 
-Open [`taskmango/src/components/TaskItem.tsx`](../../taskmango/src/components/TaskItem.tsx) and find this line:
+**Just look — do not edit anything.**
+
+Open [`taskmango/src/components/TaskItem.tsx`](../../taskmango/src/components/TaskItem.tsx) and find line 21:
 
 ```tsx
 <span dangerouslySetInnerHTML={{ __html: task.text }} />
 ```
 
-Every task's text is injected into the DOM as raw HTML. Add a task containing `<img src=x onerror=alert('xss')>` and the script executes. This is a textbook **DOM-based XSS** — and it's planted deliberately, so don't fix it by hand. You're going to make the tooling find it and fix it for you.
+This line renders every task's text as raw HTML instead of plain text. That means if someone types `<img src=x onerror=alert('xss')>` as a task, the browser executes the script — a classic **DOM-based XSS** vulnerability.
+
+This bug is planted here on purpose. **Do not fix it by hand.** In the next two labs, you'll let the scanner find it and let Copilot Autofix generate the fix as a PR.
+
+<details class="shot"><summary>What you'll see — the vulnerable line in TaskItem.tsx</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m04-xss-code.png" alt="TaskItem.tsx open on GitHub showing the dangerouslySetInnerHTML line" />
+</details>
 
 ## Lab 4.1 — Turn on the scanner
 
@@ -28,6 +36,10 @@ Code scanning is **free for public repositories** (this is why your copy is publ
 
 CodeQL now runs on your code. The first scan takes a few minutes — it builds a semantic model of the codebase, then queries it for known vulnerability patterns.
 
+<details class="shot"><summary>What you'll see — Code scanning section in Settings</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m04-codeql-settings.png" alt="GitHub Advanced Security settings page showing CodeQL analysis enabled with last scan date" />
+</details>
+
 ## Lab 4.2 — Read the alert like an engineer
 
 1. Go to the **Security** tab → **Code scanning** (under *Findings*).
@@ -37,6 +49,14 @@ CodeQL now runs on your code. The first scan takes a few minutes — it builds a
    - **Severity & the "Show paths" view**: why this is exploitable, not theoretical.
 
 > 💡 If CodeQL finds *only* this one alert on an app this size, that's the planted seed working as intended — deterministic lab outcomes are a feature.
+
+<details class="shot"><summary>What you'll see — the XSS alert in Code scanning</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m04-codeql-alert-list.png" alt="Code scanning alerts page showing DOM text reinterpreted as HTML alert rated High" />
+</details>
+
+<details class="shot"><summary>What you'll see — alert detail with data-flow path</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/m04-codeql-alert-detail.png" alt="Alert detail page showing the dangerouslySetInnerHTML sink on line 21, severity High, and the fix PR in the sidebar" />
+</details>
 
 ## Lab 4.3 — Autofix it
 
