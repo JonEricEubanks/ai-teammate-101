@@ -142,10 +142,7 @@
       if (done < TRACK_N.length) return;
       card.className = "at-up-next at-finish";
       card.innerHTML =
-        '<div class="at-up-next-kicker">Course complete — nice work</div>' +
-        '<a class="at-up-next-link" href="#/LEADERBOARD">' +
-        'Claim your spot on the leaderboard' +
-        '<span class="at-arrow">→</span></a>';
+        '<div class="at-up-next-kicker">Course complete — nice work 🏆</div>';
     } else {
       const next = TRACK_N[idx + 1];
       card.className = "at-up-next";

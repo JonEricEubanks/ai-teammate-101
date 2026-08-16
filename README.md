@@ -133,7 +133,7 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 
 7. Open **[Module 00](setup/00-environment.md)**. Work through the modules in order. Each ends with a **checkpoint**, and the **progress bot** tracks your milestones automatically in your copy's Issues.
 8. Everything happens in _your copy_ of this repo. Break things freely — that's the point.
-9. Finish all 6 milestones &rarr; **certificate unlocked** &rarr; claim your spot on the [Leaderboard](LEADERBOARD.md).
+9. Finish all 6 milestones → **certificate unlocked**. Merge the certificate PR and you're done.
 
 <details>
 <summary><b>Prefer a browser-based setup?</b> Open it in GitHub Codespaces instead</summary>
@@ -190,7 +190,7 @@ The coding agent requires Pro, Pro+, Business, or Enterprise. If you're on Free,
 <summary><b>Can I use this for a class or team workshop?</b></summary>
 <br/>
 
-Yes — the content is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Fork it, teach with it, just attribute. The auto-grader and leaderboard work out of the box for any number of students.
+Yes — the content is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Fork it, teach with it, just attribute. The auto-grader works out of the box for any number of students.
 
 </details>
 
@@ -198,7 +198,7 @@ Yes — the content is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 <summary><b>How does the certificate work?</b></summary>
 <br/>
 
-A GitHub Actions workflow watches your repo for milestone events (issue assigned, PR merged, security fix, etc.). Hit 6/6 and it opens a PR adding your certificate to the repo. Merge it and you're on the [Leaderboard](LEADERBOARD.md).
+A GitHub Actions workflow watches your repo for milestone events (issue assigned, PR merged, security fix, etc.). Hit 6/6 and it opens a PR adding your certificate to the repo. Merge it and you're done.
 
 </details>
 
