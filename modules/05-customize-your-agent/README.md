@@ -44,11 +44,17 @@ The repo's `main` branch already contains the test-engineer agent, so:
 
 1. Go to the **Agents panel**: [github.com/copilot/agents](https://github.com/copilot/agents) → select your repo.
 2. In the agent picker, you should see **test-engineer** alongside the default Copilot. Select it.
+
+<details class="shot"><summary>What you'll see — test-engineer in the agent picker</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/test-engineer.gif" alt="Agents panel showing test-engineer listed alongside the default Copilot agent" />
+</details>
+
 3. Give it this task:
 
    > TaskMango's `TaskFilter.tsx` and `TaskList.tsx` have no unit tests. Bring both under test with meaningful behavioral assertions (filtering logic, empty state, toggle/delete callbacks). Do not modify any component source. Follow the testing patterns already in `src/components/AddTaskForm.test.tsx`.
 
 4. Start the task and watch the session log — look for moments where the agent's *mandate* visibly shaped its behavior (e.g. refusing to "fix" a component to make a test easier).
+5. When the agent finishes, click **Create pull request** in the session panel — it won't open a PR automatically.
 
 When the PR arrives, review it with the Module 03 rubric — plus one extra line: **did it stay in its lane?**
 
@@ -60,7 +66,13 @@ Now create one from scratch. Pick a role that fits *your* work. Ideas:
 - `bug-hunter` — only writes failing regression tests for reported bugs
 - `a11y-reviewer` — only improves accessibility semantics
 
-Create `.github/agents/<your-agent>.md` in your repo (edit directly on GitHub.com: **Add file → Create new file**), using the test-engineer file as your template. Rules of thumb:
+Create `.github/agents/<your-agent>.md` in your repo (edit directly on GitHub.com: **Add file → Create new file**), using the test-engineer file as your template.
+
+<details class="shot"><summary>What you'll see — creating the agent file on GitHub</summary>
+<img class="shot" src="/ai-teammate-101/assets/shots/Write your own specialist.gif" alt="GitHub file editor creating a new agent markdown file under .github/agents/" />
+</details>
+
+Rules of thumb:
 
 - **One job.** If the description needs an "and", split it.
 - **Write the definition of done into the prompt.** Specialists earn their keep by being *stricter* than the generalist, not looser.
