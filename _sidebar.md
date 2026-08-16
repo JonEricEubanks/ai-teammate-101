@@ -10,8 +10,3 @@
 - **Finish**
   - [:trophy: Capstone](capstone/README.md)
   - [:bug: TaskMango seeded issues](taskmango/docs/seeded-issues.md)
-- **Post-certification**
-  - [:gauge: 06 · New Game+: Govern Your Agents](modules/06-new-game-plus/README.md)
-  - [:network: 07 · Multi-Agent Orchestration](modules/07-multi-agent-orchestration/README.md)
-  - [:map: GH-600 certification map](GH600-MAP.md)
-  - [:grad: Leaderboard](LEADERBOARD.md)

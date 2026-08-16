@@ -94,8 +94,8 @@ Want to see a finished run end-to-end before you start? Here's a complete exampl
 
 You've done the full loop: spec → delegate → observe → review → iterate → merge → reflect. Most working developers haven't. Take TaskMango's remaining backlog issues if you want reps — or better, point everything you learned at a project you actually care about.
 
-**Where next:**
+**What's next: AI Architect 201**
 
-- Wire a custom agent to an MCP server (the natural "Module 06")
-- Try the same loop on your own repository with real bugs
-- Share your retro — the community learns from real delegation stories
+Course 1 taught you to work with one agent. The next course teaches you to design systems *of* agents — multi-agent orchestration, MCP servers, governance policies, and trust boundaries. Same hands-on format, new app, higher stakes.
+
+> Coming soon. Follow [github.com/JonEricEubanks](https://github.com/JonEricEubanks) to get notified when it drops.
