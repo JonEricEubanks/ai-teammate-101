@@ -156,8 +156,7 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 | 04 | [Security on Autopilot](modules/04-security-on-autopilot/README.md) | 25 min | Use CodeQL + Copilot Autofix on a real vulnerability |
 | 05 | [Build a Specialist Agent](modules/05-customize-your-agent/README.md) | 25 min | Create a custom agent tuned to your workflow |
 | ★ | [Capstone](capstone/README.md) | 45 min | Ship two delegated tasks end-to-end, solo |
-| 06 | [New Game+: Govern Your Agents](modules/06-new-game-plus/README.md) | 40 min | Plan gates, CODEOWNERS, least privilege, anti-patterns |
-| 07 | [Multi-Agent Orchestration](modules/07-multi-agent-orchestration/README.md) | 45 min | Fan-out/fan-in, subagent handoffs, conflict arbitration |
+| → | [AI Architect 201 *(coming soon)*](https://github.com/JonEricEubanks/ai-architect-201) | Course 2 | Multi-agent orchestration, MCP servers, governance |
 
 ---
 

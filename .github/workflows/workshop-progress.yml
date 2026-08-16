@@ -144,7 +144,7 @@ jobs:
               body += `This is your real certificate — [download or share it](${certBlob}). It was generated and committed to this repo automatically when you hit 6/6.\n\n`;
               body += `You delegated, reviewed, iterated, and secured — the full loop. Every milestone above is backed by a real issue, PR, or alert **in this repository**.\n\n`;
               body += `**Share it:** post the certificate image with \`#AITeammate101\` — then claim your spot on the [leaderboard](https://github.com/JonEricEubanks/ai-teammate-101/blob/main/LEADERBOARD.md) with a PR.\n\n`;
-              body += `**Don't stop here:** [Module 06 · New Game+](https://github.com/JonEricEubanks/ai-teammate-101/tree/main/modules/06-new-game-plus) is waiting.\n`;
+              body += `**Don't stop here:** [AI Architect 201](https://github.com/JonEricEubanks/ai-architect-201) — multi-agent orchestration, MCP servers, and governance. Coming soon.\n`;
             } else {
               body += `> Next milestone not checked off? Re-run this workflow from the **Actions** tab after completing it.\n`;
             }
