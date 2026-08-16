@@ -7,6 +7,8 @@ Everything in this workshop happens on GitHub.com, in *your own copy* of this re
 > :sparkle: **Best experience — use two screens (or split your browser window).**
 > Keep your **GitHub repo** open on one side and **this workshop site** open on the other.
 > You'll constantly switch between reading instructions and acting on your repo — side-by-side eliminates the tab-switching friction.
+>
+> <img src="/ai-teammate-101/assets/shots/two-screens.png" alt="GitHub repo on the left, workshop site on the right" style="border-radius:8px;margin-top:8px" />
 
 ---
 
