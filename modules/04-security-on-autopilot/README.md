@@ -60,7 +60,7 @@ CodeQL now runs on your code. The first scan takes a few minutes — it builds a
 
 ## Lab 4.3 — Autofix it
 
-1. In the alert, look for **"Speed up the remediation of this alert with Copilot Autofix"** → click **Generate fix**.
+1. In the alert, find the **"Speed up the remediation of this alert with Copilot Autofix"** banner → click **Assign to Copilot**.
 2. Read the proposed change before touching anything. For this alert you'll likely see the raw-HTML sink replaced with plain text rendering (React escapes text content by default — which is the correct fix here). Ask yourself: *does this close the data-flow path from the alert, or just shuffle it?*
 3. Click **Commit to a new branch → Open a pull request → Commit change**.
 4. You now have a PR for the fix — the same workflow as Modules 02–03. Run the rubric on it. Notice the bonus: **CodeQL re-scans the PR**, and the alert closes itself when the fix merges. The tooling verifies the tooling.
@@ -88,7 +88,7 @@ The pattern to remember: **AI is very good at generating candidate fixes for wel
 | Symptom | Fix |
 |---|---|
 | No alerts after the scan | Confirm the scan ran on a commit that contains `taskmango/`; check **Actions** tab for the CodeQL run log |
-| No "Generate fix" button | Not all queries/languages support Autofix yet — but `js/xss-through-dom` does. Confirm you're on the alert page, not the alert list |
+| No "Assign to Copilot" button | Not all queries/languages support Autofix yet — but `js/xss-through-dom` does. Confirm you're on the alert page, not the alert list |
 | Autofix change looks odd | Treat it like any agent PR: rubric, feedback, or close it. The alert stays open until a *merged* fix closes it |
 
 </details>
