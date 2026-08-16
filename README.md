@@ -112,7 +112,7 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 <summary><b>📹 Walkthrough: Use This Template</b></summary>
 <br/>
 
-![Use this template walkthrough](https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/use-this-template.gif)
+<img src="https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/use-this-template.gif" alt="Use this template walkthrough" width="720" />
 
 </details>
 
@@ -126,9 +126,9 @@ You'll copy this template, then spend the workshop acting as the tech lead of **
 <details>
 <summary><b>📹 Walkthrough: Pages to Publish</b></summary>
 <br/>
-  
-![Open Settings and Pages to publish the workshop as a website](https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/github-pages-settings.gif)
-  
+
+<img src="https://raw.githubusercontent.com/JonEricEubanks/ai-teammate-101/main/assets/shots/github-pages-settings.gif" alt="Open Settings and Pages to publish the workshop as a website" width="720" />
+
 </details>
 
 7. Open **[Module 00](setup/00-environment.md)**. Work through the modules in order. Each ends with a **checkpoint**, and the **progress bot** tracks your milestones automatically in your copy's Issues.
