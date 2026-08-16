@@ -4,6 +4,10 @@
 
 Everything in this workshop happens on GitHub.com, in *your own copy* of this repository. No local tooling required (though Module 03 shows an optional VS Code path).
 
+> :sparkle: **Best experience — use two screens (or split your browser window).**
+> Keep your **GitHub repo** open on one side and **this workshop site** open on the other.
+> You'll constantly switch between reading instructions and acting on your repo — side-by-side eliminates the tab-switching friction.
+
 ---
 
 ## 1. Check your Copilot access
