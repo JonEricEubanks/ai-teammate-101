@@ -52,6 +52,15 @@ npm install
 npm run dev
 ```
 
+Then open [localhost:5173](http://localhost:5173). Here's what you'll see:
+
+<p align="center">
+  <img class="shot" src="/ai-teammate-101/assets/shots/taskmango-all.png" alt="TaskMango showing all tasks — two active, one completed with strikethrough" width="540" />
+  <img class="shot" src="/ai-teammate-101/assets/shots/taskmango-completed.png" alt="TaskMango Completed filter — only the done task is visible" width="540" />
+</p>
+
+_Left: the **All** view — active tasks have a checkbox, completed tasks are struck through. Right: the **Completed** filter. Your job in this workshop is to delegate improvements to this app — you won't be writing the code yourself._
+
 </details>
 
 ## 4. Publish your copy as a GitHub Pages site
