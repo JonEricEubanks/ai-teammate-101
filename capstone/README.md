@@ -98,4 +98,4 @@ You've done the full loop: spec → delegate → observe → review → iterate 
 
 Course 1 taught you to work with one agent. The next course teaches you to design systems *of* agents — multi-agent orchestration, MCP servers, governance policies, and trust boundaries. Same hands-on format, new app, higher stakes.
 
-> Coming soon. Follow [github.com/JonEricEubanks](https://github.com/JonEricEubanks) to get notified when it drops.
+> :rocket: **Ready for Course 2?** [AI Architect 201](https://jonericeubanks.github.io/ai-architect-201/) is live — multi-agent orchestration, MCP servers, governance, and observability. Same format, higher stakes.

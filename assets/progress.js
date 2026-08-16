@@ -17,8 +17,6 @@
     "modules/04-security-on-autopilot/README.md",
     "modules/05-customize-your-agent/README.md",
     "capstone/README.md",
-    "modules/06-new-game-plus/README.md",
-    "modules/07-multi-agent-orchestration/README.md",
   ];
 
   const norm = (p) =>
