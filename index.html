@@ -217,6 +217,37 @@
         overlayImg.alt = img.alt || "";
         overlay.classList.add("open");
       });
+
+      // Interactive task-list checkboxes — Docsify renders them disabled.
+      // State is persisted in localStorage keyed by route + checkbox index.
+      (() => {
+        const STORE = "at101-checks-v1";
+        const load = () => { try { return JSON.parse(localStorage.getItem(STORE) || "{}"); } catch { return {}; } };
+        const save = (data) => localStorage.setItem(STORE, JSON.stringify(data));
+
+        const activate = () => {
+          const route = location.hash || "#/";
+          const data = load();
+          const boxes = document.querySelectorAll('.content input[type="checkbox"]');
+          boxes.forEach((cb, i) => {
+            cb.removeAttribute("disabled");
+            const key = route + ":" + i;
+            if (data[key] !== undefined) cb.checked = data[key];
+            // replace with a fresh clone to drop any stale listeners
+            const fresh = cb.cloneNode(true);
+            fresh.addEventListener("change", () => {
+              const d = load();
+              d[route + ":" + i] = fresh.checked;
+              save(d);
+            });
+            cb.replaceWith(fresh);
+          });
+        };
+
+        window.$docsify.plugins = (window.$docsify.plugins || []).concat(
+          (hook) => hook.doneEach(activate),
+        );
+      })();
     </script>
   </body>
 </html>
