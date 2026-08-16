@@ -166,7 +166,7 @@
     if (!primary) return;
     if (!next) {
       primary.textContent = "Review the course";
-      primary.setAttribute("href", "README.md");
+      primary.setAttribute("href", "#/");
       return;
     }
     primary.textContent = "Resume: " + linkLabel(next);
